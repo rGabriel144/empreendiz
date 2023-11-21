@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Button } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styled from 'styled-components/native';
@@ -45,6 +45,14 @@ export default function App() {
 
     const handleRespostaClick = (index) => {
         setrespostax(index);
+        if (index !== RespostaCorreta) {
+            // Exibe um alerta indicando que a resposta está incorreta
+            Alert.alert(
+                'Resposta Incorreta',
+                'Por favor, tente novamente.',
+                [{ text: 'OK', onPress: () => console.log('OK Pressed') }]
+            );
+        }
     };
 
     const isRespostaCorretaClicada = respostax === RespostaCorreta;
