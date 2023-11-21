@@ -11,7 +11,8 @@ import {
     Container,
     Htext,
     StyledView,
-    CustomButton1
+    CustomButton1,
+    ScrollView
 } from './styles';
 
 
@@ -24,38 +25,63 @@ export default function App() {
     }
 
     return (
-        <StyledView>
-            <Icon name="book" size={50} color="#000" />
-            <Htext>Cursos</Htext>
-            <CustomButton1>
-                <ButtonText>Curso 1</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 2</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 3</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 4</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 5</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 6</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 7</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 8</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Curso 9</ButtonText>
-            </CustomButton1>
-
-        </StyledView>
+        <ScrollView>
+            <StyledView>
+                <Icon name="book" size={50} color="#000" />
+                <Htext>Cursos</Htext>
+                <CustomButton1 onPress={() => navigation.navigate('Curso1')}>
+                    <ButtonText>Curso 1</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 2</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 3</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 4</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 5</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 6</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 7</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 8</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 9</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 10</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 11</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 12</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 13</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 14</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 15</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 16</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
+                    <ButtonText>Curso 17</ButtonText>
+                </CustomButton1>
+            </StyledView>
+        </ScrollView>
     );
 }
 
