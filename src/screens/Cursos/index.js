@@ -27,7 +27,6 @@ export default function App() {
         <StyledView>
             <Icon name="book" size={50} color="#000" />
             <Htext>Cursos</Htext>
-            
             <CustomButton1>
                 <ButtonText>Curso 1</ButtonText>
             </CustomButton1>
@@ -52,7 +51,9 @@ export default function App() {
             <CustomButton1>
                 <ButtonText>Curso 8</ButtonText>
             </CustomButton1>
-            
+            <CustomButton1>
+                <ButtonText>Curso 9</ButtonText>
+            </CustomButton1>
 
         </StyledView>
     );
