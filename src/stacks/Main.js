@@ -12,6 +12,7 @@ import Inicial from '../screens/Inicial';
 import Cursos from '../screens/Cursos';
 import Quiz from '../screens/Quiz';
 import Config from '../screens/Config';
+import Curso1 from '../screens/Cursos/Curso1';
 
 const Tab = createBottomTabNavigator();
 const Stack = createNativeStackNavigator();
@@ -26,68 +27,53 @@ function LoginStack() {
   );
 }
 
-function MainTabs() {
+function CursosStack() {
   return (
-    <Tab.Navigator options={{ headerShown: false }}>
-      {/* <Tab.Screen
-        name="Inicial"
-        component={Inicial}
+    <Stack.Navigator>
+      <Stack.Screen name="Cursos" component={Cursos} options={{ headerShown: false }} />
+      <Stack.Screen
+        name="Curso1"
+        component={Curso1}
         options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="home" color={color} size={size} />
-          ),
-          headerShown: false
-        }}
-      /> */}
-      <Tab.Screen
-        name="Cursos"
-        component={Cursos}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="book" color={color} size={size} />
-          ),
-          headerShown: false
+          headerShown: false,
+          tabBarVisible: false,
         }}
       />
-      <Tab.Screen
-        name="Quiz"
-        component={Quiz}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="gamepad" color={color} size={size} />
-          ),
-          headerShown: false
-        }}
-      />
-      <Tab.Screen
-        name="Perfil"
-        component={Perfil}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="user" color={color} size={size} />
-          ),
-          headerShown: false
-        }}
-      />
-      <Tab.Screen
-        name="Configurações"
-        component={Config}
-        options={{
-          tabBarLabel: '',
-          tabBarIcon: ({ color, size }) => (
-            <Icon name="cog" color={color} size={size} />
-          ),
-          headerShown: false
-        }}
-      />
-    </Tab.Navigator>
+    </Stack.Navigator>
   );
 }
 
+
+function MainTabs() {
+  return (
+    <Tab.Navigator
+      screenOptions={({ route }) => ({
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
+
+          if (route.name === 'CursosTab') {
+            iconName = 'book';
+          } else if (route.name === 'QuizTab') {
+            iconName = 'gamepad';
+          } else if (route.name === 'PerfilTab') {
+            iconName = 'user';
+          } else if (route.name === 'ConfiguraçõesTab') {
+            iconName = 'cog';
+          }
+
+          return <Icon name={iconName} color={color} size={size} />;
+        },
+        tabBarLabel: '',
+        headerShown: false,
+      })}
+    >
+      <Tab.Screen name="CursosTab" component={CursosStack} />
+      <Tab.Screen name="QuizTab" component={Quiz} />
+      <Tab.Screen name="PerfilTab" component={Perfil} />
+      <Tab.Screen name="ConfiguraçõesTab" component={Config} />
+    </Tab.Navigator>
+  );
+}
 
 export default function App() {
   return (

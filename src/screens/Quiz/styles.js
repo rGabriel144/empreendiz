@@ -12,28 +12,97 @@ export const StyledView = styled.SafeAreaView`
 export const CustomButton = styled.TouchableOpacity`
 	width: 70%;
 	max-width: 300px;
-    background-color: #FF8899;
+    background-color: #000;
 	text-align: center;
     justify-content: center;
     align-items: center;
 	padding: 10px;
 	margin-top: 10px;
+	border-radius: 10px;
 `;
 
 export const ButtonText = styled.Text`
-	font-size: 16px;
+	font-size: 25px;
 	color: #FFF;
 `;
 
 
 
 export const Container = styled.View`
-flex: 1;
-justify-content: center;
-align-items: center;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
 `;
 
 export const Htext = styled.Text`
-font-size: 20px;
-color: #000;
+	font-size: 40px;
+	color: #000;
+	margin-bottom: 10px;
+`;
+
+export const CustomButton1 = styled.TouchableOpacity`
+	width: 70%;
+	max-width: 300px;
+	background-color: #000;
+	text-align: center;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+	margin-top: 10px;
+	border-radius: 10px;
+`;
+
+export const ScrollView = styled.ScrollView`
+	background-color: #3178E4;
+`;
+
+export const PerguntaV = styled.View`
+	margin-top: 20%;
+	flex: 1;
+	justify-content: center;
+	align-items: center;
+	background-color: #FFF;
+	padding: 20px;
+	border-radius: 10px;
+`;
+
+export const PerguntaText = styled.Text`
+	font-size: 20px;
+	margin-bottom: 20px;
+	text-align: center;
+`;
+
+export const RespostaButton = styled.TouchableOpacity`
+	backgroundColor: '#3498db';
+	padding: 10px;
+	marginVertical: 5px;
+	width: 200px;
+	alignItems: center;
+	justifyContent: center;
+	borderRadius: 8px;
+	borderWidth: 1px;
+
+`;
+
+export const RespostaButtonText = styled.Text`
+	color: #000;
+	fontSize: 16px;
+`;
+
+export const AlternativaContainer = styled.View`
+    flex-direction: column;
+	align-items: center;
+    width: 100%;
+    margin-top: 20px;
+`;
+
+export const AlternativaItem = styled.Text`
+    font-size: 18px;
+	padding: 10px;
+	marginVertical: 5px;
+	alignItems: center;
+	justifyContent: center;
+	borderRadius: 8px;
+	borderWidth: 1px;
+	margin-right: 10px;
 `;

@@ -26,6 +26,7 @@ export default function App() {
             <CustomButton onPress={voltar}>
                 <ButtonText>Entrar</ButtonText>
             </CustomButton>
+            {/* nao usar essa tela */}
         </StyledView>
     );
 }
