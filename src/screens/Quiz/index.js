@@ -30,8 +30,9 @@ export default function App() {
     const navigation = useNavigation();
     const [respostax, setrespostax] = useState(null);
 
+
     const voltar = () => {
-        setrespostax(null);
+        navigation.navigate('Quiz1');
     }
 
     const respostas = [
@@ -45,20 +46,26 @@ export default function App() {
 
     const handleRespostaClick = (index) => {
         setrespostax(index);
-        if (index !== RespostaCorreta) {
-            // Exibe um alerta indicando que a resposta está incorreta
+    };
+
+    const checarResposta = () => {
+        if (respostax === RespostaCorreta) {
+            Alert.alert(
+                'Resposta Correta',
+                'Parabéns, você acertou!',
+                [{ text: 'OK', onPress: () => navigation.navigate('Quiz2') }]
+            );
+        } else {
             Alert.alert(
                 'Resposta Incorreta',
                 'Por favor, tente novamente.',
-                [{ text: 'OK', onPress: () => console.log('OK Pressed') }]
+                [{ text: 'OK'}]
             );
         }
-    };
-
+    }
     const isRespostaCorretaClicada = respostax === RespostaCorreta;
 
     return (
-        <ScrollView>
             <StyledView>
                 <Icon name="gamepad" size={50} color="#000" />
                 <Htext>Quiz</Htext>
@@ -71,24 +78,23 @@ export default function App() {
                                 <RespostaButton
                                     onPress={() => handleRespostaClick(index)}
                                     isSelected={respostax === index}
+                                    style={{ backgroundColor: respostax === index ? '#000' : '#fff' }}
                                 >
-                                    <RespostaButtonText>{respostas}</RespostaButtonText>
+                                    <RespostaButtonText
+                                        style={{ color: respostax === index ? '#fff' : '#000' }}
+                                    >{respostas}</RespostaButtonText>
                                 </RespostaButton>
                             </View>
                         ))}
                     </AlternativaContainer>
                     
                 </PerguntaV>
-                {respostax !== null && isRespostaCorretaClicada && (
-                        <CustomButton onPress={voltar}>
-                            <ButtonText>Limpar</ButtonText>
-                        </CustomButton>
-                    )}
+                <CustomButton onPress={checarResposta}>
+                    <ButtonText>Checar Resposta</ButtonText>
+                </CustomButton>
             </StyledView>
-        </ScrollView>
     );
 }
-
 
 
 
