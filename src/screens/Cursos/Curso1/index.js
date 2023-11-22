@@ -12,7 +12,8 @@ import {
     Htext,
     StyledView,
     CustomButton1,
-    ScrollView
+    ScrollView,
+    ButtonView
 } from './styles';
 
 
@@ -20,14 +21,18 @@ export default function App() {
     const navigation = useNavigation();
     
     const voltar = () => {
-        AsyncStorage.removeItem('id');
-        navigation.navigate('LoginStack');
+        navigation.goBack
     }
 
     return (
         <ScrollView>
             <StyledView>
-                <Icon name="book" size={50} color="#000" />
+                <ButtonView>
+                    <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{position: 'absolute', left: 10, top: 10}} />
+                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                        <Icon name="book" size={50} color="#000" />
+                    </View>
+                </ButtonView>
                 <Htext>Curso 1</Htext>
                 <Text style={{color: '#FFF', fontSize: 20, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1>

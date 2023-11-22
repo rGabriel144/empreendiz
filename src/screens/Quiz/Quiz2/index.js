@@ -36,13 +36,13 @@ export default function App() {
     }
 
     const respostas = [
-        '3',
+        '11',
         '2',
         '-648',
         'Banana'
     ];
 
-    const RespostaCorreta = 1;
+    const RespostaCorreta = 0;
 
     const handleRespostaClick = (index) => {
         setrespostax(index);
@@ -53,7 +53,7 @@ export default function App() {
             Alert.alert(
                 'Resposta Correta',
                 'Parabéns, você acertou!',
-                [{ text: 'OK', onPress: () => navigation.navigate('Quiz1') }]
+                [{ text: 'OK', onPress: () => navigation.navigate('Quiz2') }]
             );
         } else {
             Alert.alert(
@@ -70,7 +70,7 @@ export default function App() {
                 <Icon name="gamepad" size={50} color="#000" />
                 <Htext>Quiz</Htext>
                 <PerguntaV>
-                    <PerguntaText>Quando é 1 + 1</PerguntaText>
+                    <PerguntaText>Quando é 10 + 1</PerguntaText>
                     <AlternativaContainer>
                         {respostas.map((respostas, index) => (
                             <View key={index} style={{ flexDirection: 'row', alignItems: 'center' }}>

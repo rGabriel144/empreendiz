@@ -55,3 +55,9 @@ border-radius: 10px;
 export const ScrollView = styled.ScrollView`
 background-color: #3178E4;
 `;
+
+export const ButtonView = styled.View`
+justify-content: center;
+flex-direction: row;
+align-items: center;
+`;

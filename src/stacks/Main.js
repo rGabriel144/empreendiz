@@ -11,6 +11,8 @@ import Perfil from '../screens/Perfil';
 import Inicial from '../screens/Inicial';
 import Cursos from '../screens/Cursos';
 import Quiz from '../screens/Quiz';
+import Quiz1 from '../screens/Quiz/Quiz1';
+import Quiz2 from '../screens/Quiz/Quiz2';
 import Config from '../screens/Config';
 import Curso1 from '../screens/Cursos/Curso1';
 
@@ -43,6 +45,16 @@ function CursosStack() {
   );
 }
 
+function QuizStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Quiz" component={Quiz} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz1" component={Quiz1} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz2" component={Quiz2} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  );
+}
+
 
 function MainTabs() {
   return (
@@ -68,7 +80,7 @@ function MainTabs() {
       })}
     >
       <Tab.Screen name="CursosTab" component={CursosStack} />
-      <Tab.Screen name="QuizTab" component={Quiz} />
+      <Tab.Screen name="QuizTab" component={QuizStack} />
       <Tab.Screen name="PerfilTab" component={Perfil} />
       <Tab.Screen name="ConfiguraçõesTab" component={Config} />
     </Tab.Navigator>
