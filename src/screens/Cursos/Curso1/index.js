@@ -21,7 +21,7 @@ export default function App() {
     const navigation = useNavigation();
     
     const voltar = () => {
-        navigation.goBack
+        navigation.goBack();
     }
 
     return (

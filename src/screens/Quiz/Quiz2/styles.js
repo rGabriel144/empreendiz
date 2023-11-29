@@ -108,3 +108,9 @@ export const AlternativaItem = styled.Text`
 	borderWidth: 1px;
 	margin-right: 10px;
 `;
+
+export const ButtonView = styled.View`
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
+`;

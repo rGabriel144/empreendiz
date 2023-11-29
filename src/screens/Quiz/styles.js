@@ -66,6 +66,8 @@ export const PerguntaV = styled.View`
 	background-color: #FFF;
 	padding: 20px;
 	border-radius: 10px;
+	width: 300px;
+	max-width: 300px;
 `;
 
 export const PerguntaText = styled.Text`
@@ -107,4 +109,10 @@ export const AlternativaItem = styled.Text`
 	borderRadius: 8px;
 	borderWidth: 1px;
 	margin-right: 10px;
+`;
+
+export const ButtonView = styled.View`
+	justify-content: center;
+	flex-direction: row;
+	align-items: center;
 `;

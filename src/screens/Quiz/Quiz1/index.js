@@ -22,9 +22,6 @@ import {
 } from './styles';
 
 
-// App.js
-
-// ... (import statements)
 
 export default function App() {
     const navigation = useNavigation();
@@ -32,7 +29,7 @@ export default function App() {
 
 
     const voltar = () => {
-        navigation.navigate('Quiz1');
+        navigation.goBack();
     }
 
     const respostas = [

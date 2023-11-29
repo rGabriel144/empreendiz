@@ -18,83 +18,87 @@ import {
     RespostaButton,
     RespostaButtonText,
     AlternativaContainer,
-    AlternativaItem
+    AlternativaItem,
+    ButtonView
 } from './styles';
-
-
-// App.js
-
-// ... (import statements)
 
 export default function App() {
     const navigation = useNavigation();
-    const [respostax, setrespostax] = useState(null);
-
+    const [respostax, setRespostax] = useState(null);
+    const [mostrarMensagem, setMostrarMensagem] = useState(false);
+    const [mensagem, setMensagem] = useState('');
 
     const voltar = () => {
-        navigation.navigate('Quiz1');
+        navigation.goBack();
     }
 
-    const respostas = [
-        '3',
-        '2',
-        '-648',
-        'Banana'
-    ];
-
-    const RespostaCorreta = 1;
+    const respostas = ['3', '2', '-648', 'Banana'];
+    const respostaCorreta = 1;
 
     const handleRespostaClick = (index) => {
-        setrespostax(index);
+        setRespostax(index);
     };
 
     const checarResposta = () => {
-        if (respostax === RespostaCorreta) {
-            Alert.alert(
-                'Resposta Correta',
-                'Parabéns, você acertou!',
-                [{ text: 'OK', onPress: () => navigation.navigate('Quiz1') }]
-            );
+        if (respostax === respostaCorreta) {
+            setMostrarMensagem(true);
+            setMensagem('Resposta Correta!');
+
+            setTimeout(() => {
+                setRespostax(null);
+                setMostrarMensagem(false);
+                navigation.navigate('Quiz1');
+            }, 2000);
         } else {
-            Alert.alert(
-                'Resposta Incorreta',
-                'Por favor, tente novamente.',
-                [{ text: 'OK'}]
-            );
+            setMostrarMensagem(true);
+            setMensagem('Resposta Incorreta. Tente novamente.');
+            setTimeout(() => {
+                setRespostax(null);
+                setMostrarMensagem(false);
+            }, 2000);
         }
-    }
-    const isRespostaCorretaClicada = respostax === RespostaCorreta;
+    };
+
+    const isRespostaCorretaClicada = respostax === respostaCorreta;
 
     return (
-            <StyledView>
-                <Icon name="gamepad" size={50} color="#000" />
-                <Htext>Quiz</Htext>
-                <PerguntaV>
-                    <PerguntaText>Quando é 1 + 1</PerguntaText>
-                    <AlternativaContainer>
-                        {respostas.map((respostas, index) => (
-                            <View key={index} style={{ flexDirection: 'row', alignItems: 'center' }}>
-                                <AlternativaItem>{String.fromCharCode(65 + index)}</AlternativaItem>
-                                <RespostaButton
-                                    onPress={() => handleRespostaClick(index)}
-                                    isSelected={respostax === index}
-                                    style={{ backgroundColor: respostax === index ? '#000' : '#fff' }}
+        <StyledView>
+            <ButtonView>
+                    {/* <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{position: 'absolute', left: 10, top: 10}} /> */}
+                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                        <Icon name="gamepad" size={50} color="#000" />
+                    </View>
+                </ButtonView>
+            <Htext>Quiz</Htext>
+            <PerguntaV>
+                <PerguntaText>Quando é 1 + 1</PerguntaText>
+                <AlternativaContainer>
+                    {respostas.map((resposta, index) => (
+                        <View key={index} style={{ flexDirection: 'row', alignItems: 'center' }}>
+                            <AlternativaItem>{String.fromCharCode(65 + index)}</AlternativaItem>
+                            <RespostaButton
+                                onPress={() => handleRespostaClick(index)}
+                                isSelected={respostax === index}
+                                style={{ backgroundColor: respostax === index ? '#000' : '#fff' }}
+                            >
+                                <RespostaButtonText
+                                    style={{ color: respostax === index ? '#fff' : '#000' }}
                                 >
-                                    <RespostaButtonText
-                                        style={{ color: respostax === index ? '#fff' : '#000' }}
-                                    >{respostas}</RespostaButtonText>
-                                </RespostaButton>
-                            </View>
-                        ))}
-                    </AlternativaContainer>
-                    
-                </PerguntaV>
-                <CustomButton onPress={checarResposta}>
-                    <ButtonText>Checar Resposta</ButtonText>
-                </CustomButton>
-            </StyledView>
+                                    {resposta}
+                                </RespostaButtonText>
+                            </RespostaButton>
+                        </View>
+                    ))}
+                </AlternativaContainer>
+                {mostrarMensagem && (
+                    <Text style={{ color: isRespostaCorretaClicada ? 'green' : 'red', fontSize: 18, marginTop: 10 }}>
+                        {mensagem}
+                    </Text>
+                )}
+            </PerguntaV>
+            <CustomButton onPress={checarResposta}>
+                <ButtonText>Checar Resposta</ButtonText>
+            </CustomButton>
+        </StyledView>
     );
 }
-
-
-
