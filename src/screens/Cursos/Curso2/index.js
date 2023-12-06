@@ -39,7 +39,9 @@ export default function App() {
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
                 <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Aula 2</Text>
-                <TextoAula>Explore os conceitos financeiros fundamentais, incluindo contabilidade, orçamento e análise de demonstrações financeiras. Saiba como interpretar balanços e fluxos de caixa para tomar decisões informadas.</TextoAula>
+                <TextoAula>
+                    Finanças são a espinha dorsal de qualquer negócio. Nesta aula, abordaremos conceitos-chave, desde contabilidade até análise financeira. Entenderemos o papel crucial do orçamento e como interpretar demonstrações financeiras para tomar decisões estratégicas informadas.
+                </TextoAula>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz2' })}>
                     <ButtonText>Quiz</ButtonText>
                 </CustomButton1>

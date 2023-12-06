@@ -33,10 +33,10 @@ export default function App() {
                     <ButtonText>Gestão de Projetos</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz2')}>
-                    <ButtonText>Curso 2</ButtonText>
+                    <ButtonText>Finanças Empresariais</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz3')}>
-                    <ButtonText>Curso 3</ButtonText>
+                    <ButtonText>Recursos Humanos</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
                     <ButtonText>Curso 4</ButtonText>

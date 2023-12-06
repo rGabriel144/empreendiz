@@ -7,7 +7,6 @@ export const StyledView = styled.SafeAreaView`
 	padding-horizontal: 5%;
 	align-items: center;
 	background-color: #3178E4;
-	justify-content: center;
 `;
 
 export const CustomButton = styled.TouchableOpacity`
@@ -59,9 +58,9 @@ export const ScrollView = styled.ScrollView`
 `;
 
 export const PerguntaV = styled.View`
-	margin-top: 20%;
+	margin-top: 50px;
 	flex: 1;
-	justify-content: center;
+	justify-content: space-evenly;
 	align-items: center;
 	background-color: #FFF;
 	padding: 20px;
@@ -81,6 +80,7 @@ export const RespostaButton = styled.TouchableOpacity`
 	padding: 10px;
 	marginVertical: 5px;
 	width: 200px;
+	max-width: 180px;
 	alignItems: center;
 	justifyContent: center;
 	borderRadius: 8px;

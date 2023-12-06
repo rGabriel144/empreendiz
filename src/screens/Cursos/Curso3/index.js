@@ -33,14 +33,13 @@ export default function App() {
                         <Icon name="book" size={50} color="#000" />
                     </View>
                 </ButtonView>
-                <Htext>Gestão de Projetos</Htext>
+                <Htext>Recursos Humanos</Htext>
                 <Text style={{color: '#FFF', fontSize: 30, marginBottom: 10, color: '#000'}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
                 <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Aula 2</Text>
-                <TextoAula>A gestão de projetos é essencial para o sucesso empresarial. Aprenda os fundamentos, desde a definição de metas até o uso eficaz de ferramentas como o PERT e o Gantt. Compreender metodologias ágeis como Scrum e Kanban também é crucial.</TextoAula>
-                <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Quiz</Text>
+                <TextoAula>Descubra as práticas modernas de recrutamento, desenvolvimento de equipes e avaliação de desempenho. A comunicação eficaz e o ambiente de trabalho positivo são essenciais para o sucesso dos negócios.</TextoAula>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz3' })}>
                     <ButtonText>Quiz</ButtonText>
                 </CustomButton1>

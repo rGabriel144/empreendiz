@@ -40,7 +40,9 @@ export default function App() {
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
                 <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Aula 2</Text>
-                <TextoAula>A gestão de projetos é essencial para o sucesso empresarial. Aprenda os fundamentos, desde a definição de metas até o uso eficaz de ferramentas como o PERT e o Gantt. Compreender metodologias ágeis como Scrum e Kanban também é crucial.</TextoAula>
+                <TextoAula>
+                    Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
+                </TextoAula>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz1' })}>
                     <ButtonText>Quiz</ButtonText>
                 </CustomButton1>
