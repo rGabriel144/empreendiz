@@ -24,9 +24,11 @@ export default function App() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
+    const idtest = 'Thomas';
+
     const login = async () => {
         if (username === '' && password === '') {
-            await AsyncStorage.setItem('id', username);
+            await AsyncStorage.setItem('id', idtest);
             navigation.navigate('MainTabs', { screen: 'Cursos' });
           } else {
             alert('Credenciais inválidas. Tente novamente.');

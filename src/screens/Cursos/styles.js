@@ -41,8 +41,8 @@ margin-bottom: 10px;
 `;
 
 export const CustomButton1 = styled.TouchableOpacity`
-width: 80%;
-max-width: 350px;
+width: 85%;
+max-width: 400px;
 background-color: #000;
 text-align: center;
 justify-content: center;

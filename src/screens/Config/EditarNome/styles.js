@@ -65,3 +65,18 @@ padding: 10px;
 margin-top: 10px;
 border-radius: 10px;
 `;
+
+export const ButtonView = styled.View`
+justify-content: center;
+flex-direction: row;
+align-items: center;
+`;
+
+export const StyledInput = styled.TextInput`
+width: 90%;
+height: 40px;
+border: 1px solid #ccc;
+padding: 8px;
+margin-bottom: 20px;
+font-size: 18px;
+`;

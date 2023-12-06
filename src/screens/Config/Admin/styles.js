@@ -65,3 +65,9 @@ padding: 10px;
 margin-top: 10px;
 border-radius: 10px;
 `;
+
+export const ButtonView = styled.View`
+justify-content: center;
+flex-direction: row;
+align-items: center;
+`;

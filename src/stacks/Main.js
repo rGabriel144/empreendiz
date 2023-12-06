@@ -11,6 +11,8 @@ import Perfil from '../screens/Perfil';
 import Inicial from '../screens/Inicial';
 import Cursos from '../screens/Cursos';
 import Config from '../screens/Config';
+import Admin from '../screens/Config/Admin';
+import EditarNome from '../screens/Config/EditarNome';
 
 import Quiz from '../screens/Quiz';
 import Quiz1 from '../screens/Quiz/Quiz1';
@@ -77,6 +79,16 @@ function QuizStack() {
   );
 }
 
+function ConfigStack() {
+  return (
+    <Stack.Navigator>
+      <Stack.Screen name="Config" component={Config} options={{ headerShown: false }} />
+      <Stack.Screen name="Admin" component={Admin} options={{ headerShown: false }} />
+      <Stack.Screen name="EditarNome" component={EditarNome} options={{ headerShown: false }} />
+    </Stack.Navigator>
+  );
+}
+
 
 function MainTabs() {
   return (
@@ -104,7 +116,7 @@ function MainTabs() {
       <Tab.Screen name="CursosTab" component={CursosStack} />
       <Tab.Screen name="QuizTab" component={QuizStack} />
       <Tab.Screen name="PerfilTab" component={Perfil} />
-      <Tab.Screen name="ConfiguraçõesTab" component={Config} />
+      <Tab.Screen name="ConfiguraçõesTab" component={ConfigStack} />
     </Tab.Navigator>
   );
 }

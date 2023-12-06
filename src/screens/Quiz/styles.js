@@ -42,8 +42,8 @@ export const Htext = styled.Text`
 `;
 
 export const CustomButton1 = styled.TouchableOpacity`
-	width: 70%;
-	max-width: 300px;
+	width: 85%;
+	max-width: 400px;
 	background-color: #000;
 	text-align: center;
 	justify-content: center;
