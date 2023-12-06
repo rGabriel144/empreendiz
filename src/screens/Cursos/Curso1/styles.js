@@ -61,3 +61,10 @@ justify-content: center;
 flex-direction: row;
 align-items: center;
 `;
+
+export const TextoAula = styled.Text`
+color: #FFF;
+font-size: 20px;
+margin-bottom: 10px;
+text-align: center;
+`;

@@ -30,34 +30,34 @@ export default function App() {
                 <Icon name="book" size={50} color="#000" />
                 <Htext>Cursos</Htext>
                 <CustomButton1 onPress={() => navigation.navigate('Curso1')}>
-                    <ButtonText>Curso 1</ButtonText>
+                    <ButtonText>Gestão de Projetos</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 2</ButtonText>
+                    <ButtonText>Finanças Empresariais</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 3</ButtonText>
+                    <ButtonText>Recursos Humanos</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 4</ButtonText>
+                    <ButtonText>Marketing e Vendas</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 5</ButtonText>
+                    <ButtonText>Gestão da Qualidade</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 6</ButtonText>
+                    <ButtonText>Gestão da Inovação</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 7</ButtonText>
+                    <ButtonText>Gestão de Equipes</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 8</ButtonText>
+                    <ButtonText>Gestão de Mudanças</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 9</ButtonText>
+                    <ButtonText>Ética nos Negócios</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 10</ButtonText>
+                    <ButtonText>Transformação Digital</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
                     <ButtonText>Curso 11</ButtonText>

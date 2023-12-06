@@ -31,41 +31,29 @@ export default function App() {
 
 
     const voltar = () => {
-        navigation.navigate('Quiz');
+        navigation.goBack();
     }
 
     const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
     const respostaCorreta = 1;
-    
 
     const handleRespostaClick = (index) => {
         setRespostax(index);
     };
 
     const checarResposta = () => {
-        const respostaCorretaTitle = 'Resposta Correta';
-        const respostaIncorretaTitle = 'Resposta Incorreta';
-    
-        const alertTitle = respostax === respostaCorreta ? respostaCorretaTitle : respostaIncorretaTitle;
-        const alertMessage = respostax === respostaCorreta ? 'Parabéns, você acertou!' : 'Ops, você errou. Tente novamente!';
-    
-        Alert.alert(
-            alertTitle,
-            alertMessage,
-            [
-                {
-                    text: 'OK',
-                    onPress: () => {
-                        setProximoDesativado(!(respostax === respostaCorreta));
-                    },
-                },
-            ],
-            { cancelable: false }
-        );
+        if (respostax === respostaCorreta) {
+            alert('Resposta Correta');
+            setProximoDesativado(false);
+
+        } else {
+            alert('Resposta Incorreta');
+            setProximoDesativado(true); 
+        }
     };
 
     const proximapergunta = () => {
-        navigation.navigate('Quiz12');
+        navigation.navigate('Quiz13');
     }
 
 
@@ -81,7 +69,7 @@ export default function App() {
                 </ButtonView>
             <Htext>Quiz</Htext>
             <PerguntaV>
-                <PerguntaText>Qual é o objetivo principal da gestão de projetos?</PerguntaText>
+                <PerguntaText>O que é um gráfico de Gantt usado para representar?</PerguntaText>
                 <AlternativaContainer>
                     {respostas.map((resposta, index) => (
                         <View key={index} style={{ flexDirection: 'row', alignItems: 'center' }}>
