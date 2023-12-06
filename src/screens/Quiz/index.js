@@ -32,10 +32,10 @@ export default function App() {
                 <CustomButton1 onPress={() => navigation.navigate('Quiz1')}>
                     <ButtonText>Gestão de Projetos</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz2')}>
                     <ButtonText>Curso 2</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz3')}>
                     <ButtonText>Curso 3</ButtonText>
                 </CustomButton1>
                 <CustomButton1>

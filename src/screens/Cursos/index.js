@@ -32,34 +32,34 @@ export default function App() {
                 <CustomButton1 onPress={() => navigation.navigate('Curso1')}>
                     <ButtonText>Gestão de Projetos</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso2')}>
                     <ButtonText>Finanças Empresariais</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso3')}>
                     <ButtonText>Recursos Humanos</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso4')}>
                     <ButtonText>Marketing e Vendas</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso5')}>
                     <ButtonText>Gestão da Qualidade</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso6')}>
                     <ButtonText>Gestão da Inovação</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso7')}>
                     <ButtonText>Gestão de Equipes</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso8')}>
                     <ButtonText>Gestão de Mudanças</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso9')}>
                     <ButtonText>Ética nos Negócios</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso10')}>
                     <ButtonText>Transformação Digital</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Curso11')}>
                     <ButtonText>Curso 11</ButtonText>
                 </CustomButton1>
                 <CustomButton1>

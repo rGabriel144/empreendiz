@@ -15,6 +15,7 @@ import {
 export default function App() {
     const navigation = useNavigation();
     
+    
     const voltar = () => {
         navigation.goBack();
     }
@@ -40,7 +41,6 @@ export default function App() {
                 </CustomButton1>
                 <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Aula 2</Text>
                 <TextoAula>A gestão de projetos é essencial para o sucesso empresarial. Aprenda os fundamentos, desde a definição de metas até o uso eficaz de ferramentas como o PERT e o Gantt. Compreender metodologias ágeis como Scrum e Kanban também é crucial.</TextoAula>
-                <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Quiz</Text>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz1' })}>
                     <ButtonText>Quiz</ButtonText>
                 </CustomButton1>
