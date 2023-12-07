@@ -18,10 +18,11 @@ import {
     RespostaButtonText,
     AlternativaContainer,
     AlternativaItem,
-    ButtonView
+    ButtonView,
+    H1text
 } from './styles';
 
-import { PerguntaV } from '../../../components/Quiz';
+import { PerguntaV } from '../../../../components/Quiz';
 
 export default function App() {
     const navigation = useNavigation();
@@ -71,8 +72,10 @@ export default function App() {
                 </View>
             </ButtonView>
             <Htext>Quiz</Htext>
+            <H1text>Gestão de Projetos</H1text>
+            <H1text>Basico</H1text>
             <PerguntaV
-                pergunta="Qual é o objetivo principal da gestão de projetos?"
+                pergunta="Basico pergunta 3?"
                 respostas={['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos']}
                 handleRespostaClick={handleRespostaClick}
                 respostax={respostax}

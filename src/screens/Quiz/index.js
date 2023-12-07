@@ -30,36 +30,34 @@ export default function App() {
             <StyledView>
                 <Icon name="gamepad" size={50} color="#000" />
                 <Htext>Quiz</Htext>
-                <CustomButton1 onPress={() => navigation.navigate('Quiz1')}>
-                    <Icon name="check" size={40} color="#fff" />
-                    <ButtonText>Gestão de Projetos</ButtonText>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz1B')}>
+                    <ButtonText>Gestão de Projetos Basico</ButtonText>
                 </CustomButton1>
-                <CustomButton1 onPress={() => navigation.navigate('Quiz2')}>
-                    <Icon name="spinner" size={30} color="#fff" />
+                <CustomButton1 onPress={() => navigation.navigate('Quiz1I')}>
+                    <ButtonText>Gestão de Projetos Intermediario</ButtonText>
+                </CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz1A')}>
+                    <ButtonText>Gestão de Projetos Avançado</ButtonText>
+                </CustomButton1>
+                <CustomButton1>
                     <ButtonText>Finanças Empresariais</ButtonText>
                 </CustomButton1>
-                <CustomButton1 onPress={() => navigation.navigate('Quiz3')}>
-                    <Icon name="star" size={30} color="#fff" />
+                <CustomButton1>
                     <ButtonText>Recursos Humanos</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <Icon name="star-o" size={30} color="#fff" />
                     <ButtonText>Marketing e Vendas</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <Icon name="star-half-empty" size={30} color="#fff" />
                     <ButtonText>Gestão da Qualidade</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <Icon name="battery" size={30} color="#fff" />
                     <ButtonText>Gestão da Inovação</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <Icon name="battery-half" size={30} color="#fff" />
                     <ButtonText>Gestão de Equipes</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <Icon name="battery-empty" size={30} color="#fff" />
                     <ButtonText>Gestão de Mudanças</ButtonText>
                 </CustomButton1>
                 <CustomButton1>

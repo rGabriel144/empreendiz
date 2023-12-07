@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components/native';
 
-export const StyledView = styled.View`
+export const StyledView = styled.SafeAreaView`
 	flex: 1;
 	padding-vertical: 10%;
 	padding-horizontal: 5%;
@@ -10,8 +10,8 @@ export const StyledView = styled.View`
 `;
 
 export const CustomButton = styled.TouchableOpacity`
-	width: 80%;
-	max-width: 400px;
+	width: 70%;
+	max-width: 300px;
     background-color: #000;
 	text-align: center;
     justify-content: center;
@@ -24,7 +24,6 @@ export const CustomButton = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
 	font-size: 25px;
 	color: #FFF;
-	text-align: center;
 `;
 
 
@@ -42,9 +41,15 @@ margin-bottom: 10px;
 font-weight: bold;
 `;
 
+export const HtextT = styled.Text`
+font-size: 40px;
+color: #000;
+margin-bottom: 10px;
+`;
+
 export const CustomButton1 = styled.TouchableOpacity`
-width: 90%;
-max-width: 400px;
+width: 70%;
+max-width: 300px;
 background-color: #000;
 text-align: center;
 justify-content: center;
@@ -54,17 +59,8 @@ margin-top: 10px;
 border-radius: 10px;
 `;
 
-
-export const AdminArea = styled.View`
-width: 90%;
-max-width: 400px;
-background-color: #fff;
-text-align: center;
-justify-content: center;
-align-items: center;
-padding: 10px;
-margin-top: 10px;
-border-radius: 10px;
+export const ScrollView = styled.ScrollView`
+background-color: #3178E4;
 `;
 
 export const ButtonView = styled.View`
@@ -73,11 +69,9 @@ flex-direction: row;
 align-items: center;
 `;
 
-export const StyledInput = styled.TextInput`
-width: 90%;
-height: 40px;
-border: 1px solid #ccc;
-padding: 8px;
-margin-bottom: 20px;
-font-size: 18px;
+export const TextoAula = styled.Text`
+color: #FFF;
+font-size: 20px;
+margin-bottom: 10px;
+text-align: center;
 `;

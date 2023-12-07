@@ -75,6 +75,7 @@ export const Htext = styled.Text`
 	font-size: 40px;
 	color: #000;
 	margin-bottom: 10px;
+	font-weight: bold;
 `;
 
 export const StyledView = styled.View`

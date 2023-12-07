@@ -25,8 +25,6 @@ export const CustomButton = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
 	font-size: 25px;
 	color: #FFF;
-	padding: 5px;
-	text-align: center;
 `;
 
 
@@ -44,9 +42,15 @@ export const Htext = styled.Text`
 	font-weight: bold;
 `;
 
+export const H1text = styled.Text`
+	font-size: 30px;
+	color: #000;
+	margin-bottom: 10px;
+`;
+
 export const CustomButton1 = styled.TouchableOpacity`
-	width: 85%;
-	max-width: 400px;
+	width: 70%;
+	max-width: 300px;
 	background-color: #000;
 	text-align: center;
 	justify-content: center;
@@ -54,7 +58,6 @@ export const CustomButton1 = styled.TouchableOpacity`
 	padding: 10px;
 	margin-top: 10px;
 	border-radius: 10px;
-	flex-direction: row;
 `;
 
 export const ScrollView = styled.ScrollView`
@@ -69,8 +72,8 @@ export const PerguntaV = styled.View`
 	background-color: #FFF;
 	padding: 20px;
 	border-radius: 10px;
-	width: 80%;
-	max-width: 80%;
+	width: 90%;
+	max-width: 90%;
 `;
 
 export const PerguntaText = styled.Text`
@@ -95,6 +98,7 @@ export const RespostaButton = styled.TouchableOpacity`
 export const RespostaButtonText = styled.Text`
 	color: #000;
 	fontSize: 16px;
+	textAlign: center;
 `;
 
 export const AlternativaContainer = styled.View`
