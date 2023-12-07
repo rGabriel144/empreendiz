@@ -25,6 +25,7 @@ export const CustomButton = styled.TouchableOpacity`
 export const ButtonText = styled.Text`
 	font-size: 25px;
 	color: #FFF;
+	padding: 5px;
 `;
 
 
@@ -51,6 +52,7 @@ export const CustomButton1 = styled.TouchableOpacity`
 	padding: 10px;
 	margin-top: 10px;
 	border-radius: 10px;
+	flex-direction: row;
 `;
 
 export const ScrollView = styled.ScrollView`

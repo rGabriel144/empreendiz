@@ -70,10 +70,6 @@ export default function App() {
                 <FPasswordButton onPress={cadastro}>
                     <ButtonText2>Cadastrar</ButtonText2>
                 </FPasswordButton>
-                <Image
-                    source={require('../../img/sebrae.png')} 
-                    style={{ width: 200, height: 80, marginTop: '20%', marginBottom: '0%'}} 
-                />
             </View>
         </Container>
     );

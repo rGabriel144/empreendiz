@@ -43,6 +43,9 @@ export default function App() {
                 <TextoAula>
                     Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
                 </TextoAula>
+                <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
+                    <ButtonText>Material</ButtonText>
+                </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz1' })}>
                     <ButtonText>Quiz</ButtonText>
                 </CustomButton1>

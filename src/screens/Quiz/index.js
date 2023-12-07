@@ -5,6 +5,7 @@ import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styled from 'styled-components/native';
 import Icon from 'react-native-vector-icons/FontAwesome';
+import Icon2 from 'react-native-vector-icons/AntDesign';
 import {
     CustomButton,
     ButtonText,
@@ -30,34 +31,42 @@ export default function App() {
                 <Icon name="gamepad" size={50} color="#000" />
                 <Htext>Quiz</Htext>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz1')}>
+                    <Icon name="check" size={40} color="#fff" />
                     <ButtonText>Gestão de Projetos</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz2')}>
+                    <Icon name="spinner" size={30} color="#fff" />
                     <ButtonText>Finanças Empresariais</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz3')}>
+                    <Icon name="star" size={30} color="#fff" />
                     <ButtonText>Recursos Humanos</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 4</ButtonText>
+                    <Icon name="star-o" size={30} color="#fff" />
+                    <ButtonText>Marketing e Vendas</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 5</ButtonText>
+                    <Icon name="star-half-empty" size={30} color="#fff" />
+                    <ButtonText>Gestão da Qualidade</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 6</ButtonText>
+                    <Icon name="battery" size={30} color="#fff" />
+                    <ButtonText>Gestão da Inovação</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 7</ButtonText>
+                    <Icon name="battery-half" size={30} color="#fff" />
+                    <ButtonText>Gestão de Equipes</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 8</ButtonText>
+                    <Icon name="battery-empty" size={30} color="#fff" />
+                    <ButtonText>Gestão de Mudanças</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 9</ButtonText>
+                    <ButtonText>Ética nos Negócios</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
-                    <ButtonText>Curso 10</ButtonText>
+                    <ButtonText>Transformação Digital</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
                     <ButtonText>Curso 11</ButtonText>
