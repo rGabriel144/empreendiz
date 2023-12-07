@@ -13,7 +13,6 @@ import {
     StyledView,
     CustomButton1,
     ScrollView,
-    PerguntaV,
     PerguntaText,
     RespostaButton,
     RespostaButtonText,
@@ -22,96 +21,74 @@ import {
     ButtonView
 } from './styles';
 
+import { PerguntaV } from '../../../components/Quiz';
+
 export default function App() {
     const navigation = useNavigation();
-    const [respostax, setRespostax] = useState(null);
-    const [mostrarMensagem, setMostrarMensagem] = useState(false);
-    const [mensagem, setMensagem] = useState('');
-    const [proximoDesativado, setProximoDesativado] = useState(true);
-
+    const [respostax, setRespostax] = useState({
+        index: null,
+        isCorrect: null,
+    });
 
     const voltar = () => {
         navigation.navigate('Quiz');
-    }
-
-    const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
-    const respostaCorreta = 1;
-    
-
-    const handleRespostaClick = (index) => {
-        setRespostax(index);
     };
 
-    const checarResposta = () => {
-        const respostaCorretaTitle = 'Resposta Correta';
-        const respostaIncorretaTitle = 'Resposta Incorreta';
-    
-        const alertTitle = respostax === respostaCorreta ? respostaCorretaTitle : respostaIncorretaTitle;
-        const alertMessage = respostax === respostaCorreta ? 'Parabéns, você acertou!' : 'Ops, você errou. Tente novamente!';
-    
-        Alert.alert(
-            alertTitle,
-            alertMessage,
-            [
-                {
-                    text: 'OK',
-                    onPress: () => {
-                        setProximoDesativado(!(respostax === respostaCorreta));
-                    },
-                },
-            ],
-            { cancelable: false }
-        );
+    const respostaCorreta = 1;
+
+    const handleRespostaClick = (index) => {
+        if (respostax.index === null) {
+            const isCorrect = index === respostaCorreta;
+            setRespostax({
+                index,
+                isCorrect,
+            });
+        }
     };
 
     const proximapergunta = () => {
-        navigation.navigate('Quiz12');
-    }
-
-
-    const isRespostaCorretaClicada = respostax === respostaCorreta;
+        if (respostax.isCorrect) {
+            navigation.navigate('Quiz12');
+        } else {
+            // Answer is incorrect, show alert with correct answer
+            Alert.alert(
+                'Resposta Incorreta',
+                `A resposta correta é: ${respostas[respostaCorreta]}`,
+                [
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz12') }
+                ]
+            );
+        }
+    };
+    
 
     return (
         <StyledView>
             <ButtonView>
-                    <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{position: 'absolute', left: 10, top: 10}} />
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <Icon name="gamepad" size={50} color="#000" />
-                    </View>
-                </ButtonView>
+                <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                    <Icon name="gamepad" size={50} color="#000" />
+                </View>
+            </ButtonView>
             <Htext>Quiz</Htext>
-            <PerguntaV>
-                <PerguntaText>Qual é o objetivo principal da gestão de projetos?</PerguntaText>
-                <AlternativaContainer>
-                    {respostas.map((resposta, index) => (
-                        <View key={index} style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <AlternativaItem>{String.fromCharCode(65 + index)}</AlternativaItem>
-                            <RespostaButton
-                                onPress={() => handleRespostaClick(index)}
-                                isSelected={respostax === index}
-                                style={{ backgroundColor: respostax === index ? '#000' : '#fff' }}
-                            >
-                                <RespostaButtonText
-                                    style={{ color: respostax === index ? '#fff' : '#000' }}
-                                >
-                                    {resposta}
-                                </RespostaButtonText>
-                            </RespostaButton>
-                        </View>
-                    ))}
-                </AlternativaContainer>
-                {mostrarMensagem && (
-                    <Text style={{ color: isRespostaCorretaClicada ? 'green' : 'red', fontSize: 18, marginTop: 10 }}>
-                        {mensagem}
-                    </Text>
-                )}
-            </PerguntaV>
+            <PerguntaV
+                pergunta="Qual é o objetivo principal da gestão de projetos?"
+                respostas={['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos']}
+                handleRespostaClick={handleRespostaClick}
+                respostax={respostax}
+            />
             <View style={{ flexDirection: 'row', justifyContent: 'center', width: '60%', alignItems: 'center' }}>
-                <CustomButton onPress={checarResposta}>
-                    <ButtonText>Verificar</ButtonText>
-                </CustomButton>
-                <CustomButton onPress={proximapergunta} style={{ marginLeft: 10, backgroundColor: proximoDesativado ? '#888' : '#000' }} disabled={proximoDesativado}>
-                    <ButtonText style={{ color: '#fff' }}>Proximo</ButtonText>
+                <CustomButton
+                    onPress={proximapergunta}
+                    disabled={respostax.index === null} 
+                    style={{
+                        marginLeft: 10,
+                        backgroundColor: respostax.index !== null ? '#000' : '#ccc', 
+                    }}
+                >
+                    <ButtonText style={{ color: respostax.index !== null ? '#fff' : '#666' }}>
+                        Próximo
+                    </ButtonText>
                 </CustomButton>
             </View>
         </StyledView>
