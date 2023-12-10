@@ -33,6 +33,24 @@ export default function App() {
         });
     }
 
+    const limparP = () => {
+        async function clear() {
+            try {
+                await AsyncStorage.removeItem('pontos');
+            } catch (error) {
+                console.error(error);
+            }
+        }
+    }
+
+    const Quiz = () => {
+        navigation.navigate('Quiz1B3');
+    }
+
+    const QuizF = () => {
+        navigation.navigate('Final1B');
+    }
+
     return (
         <StyledView>
             <ButtonView>
@@ -45,6 +63,15 @@ export default function App() {
             <Htext>Admin</Htext>
             <CustomButton1 onPress={limpar}>
                 <ButtonText>Limpar navigation</ButtonText>
+            </CustomButton1>
+            <CustomButton1 onPress={limparP}>
+                <ButtonText>Limpar Pontos</ButtonText>
+            </CustomButton1>
+            <CustomButton1 onPress={Quiz}>
+                <ButtonText>Quiz</ButtonText>
+            </CustomButton1>
+            <CustomButton1 onPress={QuizF}>
+                <ButtonText>QuizF</ButtonText>
             </CustomButton1>
         </StyledView>
     );

@@ -42,13 +42,14 @@ export default function App() {
                 <HtextT>Básico</HtextT>
                 <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
+                    <Icon name="play" size={30} color={'#fff'} />
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
                 <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
                 <TextoAula>
-                    Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
+                Gestão de Projetos é o processo de planejar, executar e controlar atividades para atingir metas dentro de prazos e orçamentos definidos. Envolve fases de definição de objetivos, implementação do plano e monitoramento do progresso. Metodologias como a tradicional (Cascata) e ágil oferecem abordagens distintas, enquanto ferramentas como EDT, Caminho Crítico e EVM são essenciais. Competências necessárias incluem liderança, comunicação eficaz e gestão de riscos. A gestão de projetos, presente em diversos setores, é adaptável às necessidades específicas de cada projeto.
                 </TextoAula>
-                <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
+                <CustomButton1 onPress={() => navigation.navigate('Material1')}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz1B' })}>

@@ -24,7 +24,7 @@ const colorfont = colors.fonte;
 export default function App() {
   const navigation = useNavigation();
 
-  const isFocused = useIsFocused();
+  
 
   function clearandgoToInputScreen() {
     AsyncStorage.removeItem('id');
@@ -33,7 +33,7 @@ export default function App() {
     });
   }
 
-
+  const isFocused = useIsFocused();
   const [savedText, setSavedText] = useState('');
 
   useEffect(() => {

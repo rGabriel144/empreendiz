@@ -19,6 +19,7 @@ import Quiz from '../screens/Quiz';
 import Quiz1B from '../screens/Quiz/Quiz1B';
 import Quiz1B2 from '../screens/Quiz/Quiz1B/Quiz1B2';
 import Quiz1B3 from '../screens/Quiz/Quiz1B/Quiz1B3';
+import Final1B from '../screens/Quiz/Quiz1B/Final1B';
 import Quiz1I from '../screens/Quiz/Quiz1I';
 import Quiz1I2 from '../screens/Quiz/Quiz1I/Quiz1I2';
 import Quiz1I3 from '../screens/Quiz/Quiz1I/Quiz1I3';
@@ -50,6 +51,7 @@ import Curso1 from '../screens/Cursos/Curso1';
 import Curso1B from '../screens/Cursos/Curso1/Curso1B';
 import Curso1I from '../screens/Cursos/Curso1/Curso1I';
 import Curso1A from '../screens/Cursos/Curso1/Curso1A';
+import Material1 from '../screens/Cursos/Curso1/Material1';
 import Curso2 from '../screens/Cursos/Curso2';
 import Curso2B from '../screens/Cursos/Curso2/Curso2B';
 import Curso2I from '../screens/Cursos/Curso2/Curso2I';
@@ -87,6 +89,7 @@ function CursosStack() {
       <Stack.Screen name="Curso1B" component={Curso1B} options={{headerShown: false}}/>
       <Stack.Screen name="Curso1I" component={Curso1I} options={{headerShown: false}}/>
       <Stack.Screen name="Curso1A" component={Curso1A} options={{headerShown: false}}/>
+      <Stack.Screen name="Material1" component={Material1} options={{headerShown: false}}/>
       <Stack.Screen name="Curso2" component={Curso2} options={{headerShown: false}}/>
       <Stack.Screen name="Curso2B" component={Curso2B} options={{headerShown: false}}/>
       <Stack.Screen name="Curso2I" component={Curso2I} options={{headerShown: false}}/>
@@ -113,6 +116,7 @@ function QuizStack() {
       <Stack.Screen name="Quiz1B" component={Quiz1B} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1B2" component={Quiz1B2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1B3" component={Quiz1B3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final1B" component={Final1B} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1I" component={Quiz1I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1I2" component={Quiz1I2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1I3" component={Quiz1I3} options={{ headerShown: false }} />
