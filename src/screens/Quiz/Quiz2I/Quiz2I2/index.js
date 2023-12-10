@@ -13,93 +13,93 @@ import {
     StyledView,
     CustomButton1,
     ScrollView,
-    PerguntaV,
     PerguntaText,
     RespostaButton,
     RespostaButtonText,
     AlternativaContainer,
     AlternativaItem,
-    ButtonView
+    ButtonView,
+    H1text
 } from './styles';
+import colors from '../../../../components/color.js';
+
+const colorfont = colors.fonte;
+const colorbutton = colors.botao;
+
+import { PerguntaV } from '../../../../components/Quiz';
 
 export default function App() {
     const navigation = useNavigation();
-    const [respostax, setRespostax] = useState(null);
-    const [mostrarMensagem, setMostrarMensagem] = useState(false);
-    const [mensagem, setMensagem] = useState('');
-    const [proximoDesativado, setProximoDesativado] = useState(true);
+    const [alternativaSelecionada, setAlternativaSelecionada] = useState(null);
+    const [respostax, setRespostax] = useState({
+        index: null,
+        isCorrect: null,
+    });
 
+    const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
 
     const voltar = () => {
-        navigation.goBack();
-    }
+        navigation.navigate('Quiz');
+    };
 
-    const respostas = ['Registro histórico', 'Previsão futura e controle', 'Distribuição de lucros'];
     const respostaCorreta = 1;
 
     const handleRespostaClick = (index) => {
-        setRespostax(index);
-    };
-
-    const checarResposta = () => {
-        if (respostax === respostaCorreta) {
-            alert('Resposta Correta');
-            setProximoDesativado(false);
-
-        } else {
-            alert('Resposta Incorreta');
-            setProximoDesativado(true); 
+        if (respostax.index === null) {
+            const isCorrect = index === respostaCorreta;
+            setRespostax({
+                index,
+                isCorrect,
+            });
         }
+        setAlternativaSelecionada(respostax[index]);
     };
 
     const proximapergunta = () => {
-        navigation.navigate('Quiz23');
-    }
-
-
-    const isRespostaCorretaClicada = respostax === respostaCorreta;
+        if (respostax.isCorrect) {
+            navigation.navigate('Quiz1A2');
+        } else {
+            Alert.alert(
+                'Resposta Incorreta',
+                `A resposta correta é: ${respostas[respostaCorreta]}`,
+                [
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1A2') }
+                ]
+            );
+        }
+    };
+    
 
     return (
         <StyledView>
             <ButtonView>
-                    <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{position: 'absolute', left: 10, top: 10}} />
-                    <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <Icon name="gamepad" size={50} color="#000" />
-                    </View>
-                </ButtonView>
+                <Icon name="arrow-left" size={30} color={colorfont} onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
+                <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+                    <Icon name="gamepad" size={50} color={colorfont} />
+                </View>
+            </ButtonView>
             <Htext>Quiz</Htext>
-            <PerguntaV>
-                <PerguntaText>Qual é a principal finalidade do orçamento empresarial?</PerguntaText>
-                <AlternativaContainer>
-                    {respostas.map((resposta, index) => (
-                        <View key={index} style={{ flexDirection: 'row', alignItems: 'center' }}>
-                            <AlternativaItem>{String.fromCharCode(65 + index)}</AlternativaItem>
-                            <RespostaButton
-                                onPress={() => handleRespostaClick(index)}
-                                isSelected={respostax === index}
-                                style={{ backgroundColor: respostax === index ? '#000' : '#fff' }}
-                            >
-                                <RespostaButtonText
-                                    style={{ color: respostax === index ? '#fff' : '#000' }}
-                                >
-                                    {resposta}
-                                </RespostaButtonText>
-                            </RespostaButton>
-                        </View>
-                    ))}
-                </AlternativaContainer>
-                {mostrarMensagem && (
-                    <Text style={{ color: isRespostaCorretaClicada ? 'green' : 'red', fontSize: 18, marginTop: 10 }}>
-                        {mensagem}
-                    </Text>
-                )}
-            </PerguntaV>
+            <H1text>Finanças Empresariais</H1text>
+            <H1text>Básico</H1text>
+            <PerguntaV
+                pergunta="Qual é o objetivo principal da gestão de projetos?"
+                respostas={[respostas[0], respostas[1], respostas[2]]}
+                handleRespostaClick={handleRespostaClick}
+                respostax={respostax}
+                alternativaSelecionada={alternativaSelecionada}
+            />
             <View style={{ flexDirection: 'row', justifyContent: 'center', width: '60%', alignItems: 'center' }}>
-                <CustomButton onPress={checarResposta}>
-                    <ButtonText>Verificar</ButtonText>
-                </CustomButton>
-                <CustomButton onPress={proximapergunta} style={{ marginLeft: 10, backgroundColor: proximoDesativado ? '#888' : '#000' }} disabled={proximoDesativado}>
-                    <ButtonText style={{ color: '#fff' }}>Proximo</ButtonText>
+                <CustomButton
+                    onPress={proximapergunta}
+                    disabled={respostax.index === null} 
+                    style={{
+                        marginLeft: 10,
+                        backgroundColor: respostax.index !== null ? colorbutton : '#ccc', 
+                    }}
+                >
+                    <ButtonText style={{ color: respostax.index !== null ? '#fff' : '#666' }}>
+                        Próximo
+                    </ButtonText>
                 </CustomButton>
             </View>
         </StyledView>

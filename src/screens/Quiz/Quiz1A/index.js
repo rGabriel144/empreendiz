@@ -36,7 +36,10 @@ export default function App() {
         isCorrect: null,
     });
 
-    const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
+    const respostas = [
+        'A análise de riscos é crucial para identificar possíveis obstáculos e tomar medidas preventivas.', 
+        'A análise de riscos apenas adiciona complexidade desnecessária ao gerenciamento de projetos.', 
+        'Um plano de comunicação define apenas os meios de comunicação a serem utilizados'];
 
     const voltar = () => {
         navigation.navigate('Quiz');

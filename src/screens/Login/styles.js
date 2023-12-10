@@ -12,7 +12,7 @@ export const StyledView = styled.SafeAreaView`
 
 export const LoginContainer = styled.View`
 	flex: 1;
-    backgroundColor: ${colors.fundo};
+    backgroundColor: #3178E4;
     alignItems: center;
     justifyContent: center;
     width: 100%;
@@ -63,7 +63,7 @@ align-items: center;
 export const Input = styled.TextInput`
 width: 80%;
 height: 40px;
-border: 1px solid #ccc;
+border: 1px solid #FFF;
 border-radius: 10px;
 padding: 8px;
 margin-bottom: 20px;
@@ -78,6 +78,7 @@ export const LoginButton = styled.TouchableOpacity`
     align-items: center;
 	padding: 10px;
 	margin-top: 10px;
+	border-radius: 10px;
 `;
 
 export const TextIcon = styled.Text`

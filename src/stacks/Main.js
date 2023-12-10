@@ -34,6 +34,15 @@ import Quiz2I3 from '../screens/Quiz/Quiz2I/Quiz2I3';
 import Quiz2A from '../screens/Quiz/Quiz2A';
 import Quiz2A2 from '../screens/Quiz/Quiz2A/Quiz2A2';
 import Quiz2A3 from '../screens/Quiz/Quiz2A/Quiz2A3';
+import Quiz3B from '../screens/Quiz/Quiz3B';
+import Quiz3B2 from '../screens/Quiz/Quiz3B/Quiz3B2';
+import Quiz3B3 from '../screens/Quiz/Quiz3B/Quiz3B3';
+import Quiz3I from '../screens/Quiz/Quiz3I';
+import Quiz3I2 from '../screens/Quiz/Quiz3I/Quiz3I2';
+import Quiz3I3 from '../screens/Quiz/Quiz3I/Quiz3I3';
+import Quiz3A from '../screens/Quiz/Quiz3A';
+import Quiz3A2 from '../screens/Quiz/Quiz3A/Quiz3A2';
+import Quiz3A3 from '../screens/Quiz/Quiz3A/Quiz3A3';
 
 
 
@@ -42,7 +51,13 @@ import Curso1B from '../screens/Cursos/Curso1/Curso1B';
 import Curso1I from '../screens/Cursos/Curso1/Curso1I';
 import Curso1A from '../screens/Cursos/Curso1/Curso1A';
 import Curso2 from '../screens/Cursos/Curso2';
+import Curso2B from '../screens/Cursos/Curso2/Curso2B';
+import Curso2I from '../screens/Cursos/Curso2/Curso2I';
+import Curso2A from '../screens/Cursos/Curso2/Curso2A';
 import Curso3 from '../screens/Cursos/Curso3';
+import Curso3B from '../screens/Cursos/Curso3/Curso3B';
+import Curso3I from '../screens/Cursos/Curso3/Curso3I';
+import Curso3A from '../screens/Cursos/Curso3/Curso3A';
 import Curso4 from '../screens/Cursos/Curso4';
 import Curso5 from '../screens/Cursos/Curso5';
 import Curso6 from '../screens/Cursos/Curso6';
@@ -73,7 +88,13 @@ function CursosStack() {
       <Stack.Screen name="Curso1I" component={Curso1I} options={{headerShown: false}}/>
       <Stack.Screen name="Curso1A" component={Curso1A} options={{headerShown: false}}/>
       <Stack.Screen name="Curso2" component={Curso2} options={{headerShown: false}}/>
+      <Stack.Screen name="Curso2B" component={Curso2B} options={{headerShown: false}}/>
+      <Stack.Screen name="Curso2I" component={Curso2I} options={{headerShown: false}}/>
+      <Stack.Screen name="Curso2A" component={Curso2A} options={{headerShown: false}}/>
       <Stack.Screen name="Curso3" component={Curso3} options={{headerShown: false}}/>
+      <Stack.Screen name="Curso3B" component={Curso3B} options={{headerShown: false}}/>
+      <Stack.Screen name="Curso3I" component={Curso3I} options={{headerShown: false}}/>
+      <Stack.Screen name="Curso3A" component={Curso3A} options={{headerShown: false}}/>
       <Stack.Screen name="Curso4" component={Curso4} options={{headerShown: false}}/>
       <Stack.Screen name="Curso5" component={Curso5} options={{headerShown: false}}/>
       <Stack.Screen name="Curso6" component={Curso6} options={{headerShown: false}}/>
@@ -107,6 +128,15 @@ function QuizStack() {
       <Stack.Screen name="Quiz2A" component={Quiz2A} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2A2" component={Quiz2A2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2A3" component={Quiz2A3} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3B" component={Quiz3B} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3B2" component={Quiz3B2} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3B3" component={Quiz3B3} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3I" component={Quiz3I} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3I2" component={Quiz3I2} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3I3" component={Quiz3I3} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3A" component={Quiz3A} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3A2" component={Quiz3A2} options={{ headerShown: false }} />
+      <Stack.Screen name="Quiz3A3" component={Quiz3A3} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }
@@ -127,8 +157,8 @@ function MainTabs() {
     <Tab.Navigator
       screenOptions={({ route }) => ({
         tabBarStyle: {
-          backgroundColor: '#3178e4',
-          borderTopColor: '#3178e4',
+          backgroundColor: '#2863bb',
+          borderTopColor: '#2863bb',
           height: 50,
         },
         tabBarIcon: ({ color, size }) => {

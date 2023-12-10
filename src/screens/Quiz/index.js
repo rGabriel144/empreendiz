@@ -51,8 +51,14 @@ export default function App() {
                 <CustomButton1 onPress={() => navigation.navigate('Quiz2A')}>
                     <ButtonText>Finanças Empresariais Avançado</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
-                    <ButtonText>Recursos Humanos</ButtonText>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz3B')}>
+                    <ButtonText>Recursos Humanos Básico</ButtonText>
+                </CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz3I')}>
+                    <ButtonText>Recursos Humanos Intermediário</ButtonText>
+                </CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz3A')}>
+                    <ButtonText>Recursos Humanos Avançado</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
                     <ButtonText>Marketing e Vendas</ButtonText>

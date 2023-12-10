@@ -51,7 +51,7 @@ export default function App() {
                 <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
-                <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz1' })}>
+                <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz1I' })}>
                     <ButtonText>Quiz</ButtonText>
                 </CustomButton1>
             </StyledView>

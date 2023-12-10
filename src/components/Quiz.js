@@ -24,8 +24,8 @@ export const RespostaButton = styled.TouchableOpacity`
 	backgroundColor: '#3498db';
 	padding: 10px;
 	marginVertical: 5px;
-	width: 200px;
-	max-width: 180px;
+	width: 80%;
+	max-width: 80%;
 	alignItems: center;
 	justifyContent: center;
 	borderRadius: 8px;
