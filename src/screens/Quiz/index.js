@@ -15,6 +15,9 @@ import {
     CustomButton1,
     ScrollView
 } from './styles';
+import colors from '../../components/color.js';
+
+const colorfont = colors.fonte;
 
 
 export default function App() {
@@ -28,19 +31,25 @@ export default function App() {
     return (
         <ScrollView>
             <StyledView>
-                <Icon name="gamepad" size={50} color="#000" />
+                <Icon name="gamepad" size={50} color={colorfont} />
                 <Htext>Quiz</Htext>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz1B')}>
-                    <ButtonText>Gestão de Projetos Basico</ButtonText>
+                    <ButtonText>Gestão de Projetos Básico</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz1I')}>
-                    <ButtonText>Gestão de Projetos Intermediario</ButtonText>
+                    <ButtonText>Gestão de Projetos Intermediário</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Quiz1A')}>
                     <ButtonText>Gestão de Projetos Avançado</ButtonText>
                 </CustomButton1>
-                <CustomButton1>
-                    <ButtonText>Finanças Empresariais</ButtonText>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz2B')}>
+                    <ButtonText>Finanças Empresariais Básico</ButtonText>
+                </CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz2I')}>
+                    <ButtonText>Finanças Empresariais Intermediário</ButtonText>
+                </CustomButton1>
+                <CustomButton1 onPress={() => navigation.navigate('Quiz2A')}>
+                    <ButtonText>Finanças Empresariais Avançado</ButtonText>
                 </CustomButton1>
                 <CustomButton1>
                     <ButtonText>Recursos Humanos</ButtonText>

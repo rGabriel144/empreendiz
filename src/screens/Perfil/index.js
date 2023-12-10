@@ -17,6 +17,9 @@ import {
   Htext,
   StyledView
 } from './styles';
+import colors from '../../components/color.js';
+
+const colorfont = colors.fonte;
 
 export default function App() {
   const navigation = useNavigation();
@@ -50,7 +53,7 @@ export default function App() {
 
   return (
     <StyledView>
-      <Icon name="user" size={50} color="#000" />
+      <Icon name="user" size={50} color={colorfont} />
       <Htext>Perfil</Htext>
       <Svg height="150" width="150">
         <Circle cx="75" cy="75" r="67.5" fill="white" />

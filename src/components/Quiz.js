@@ -59,7 +59,7 @@ export const AlternativaItem = styled.Text`
 
 
 
-export const PerguntaV = ({ pergunta, respostas, handleRespostaClick, respostax }) => (
+export const PerguntaV = ({ pergunta, respostas, handleRespostaClick, respostax, alternativaSelecionada }) => (
     <PView>
         <PerguntaText>{pergunta}</PerguntaText>
         <AlternativaContainer>

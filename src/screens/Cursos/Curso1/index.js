@@ -15,7 +15,9 @@ import {
     ScrollView,
     ButtonView
 } from './styles';
+import colors from '../../../components/color.js';
 
+const colorfont = colors.fonte;
 
 export default function App() {
     const navigation = useNavigation();
@@ -28,17 +30,17 @@ export default function App() {
         <ScrollView>
             <StyledView>
                 <ButtonView>
-                    <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
+                    <Icon name="arrow-left" size={30} color={colorfont} onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
                     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <Icon name="book" size={50} color="#000" />
+                        <Icon name="book" size={50} color={colorfont} />
                     </View>
                 </ButtonView>
                 <Htext>Gestão de Projetos</Htext>
                 <CustomButton1 onPress={() => navigation.navigate('Curso1B')}>
-                    <ButtonText>Basico</ButtonText>
+                    <ButtonText>Básico</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Curso1I')}>
-                    <ButtonText>Intermediario</ButtonText>
+                    <ButtonText>Intermediário</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('Curso1A')}>
                     <ButtonText>Avançado</ButtonText>

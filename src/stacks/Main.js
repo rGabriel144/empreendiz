@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 
+
 // Importe suas telas (Login, Cadastro, Perfil, Inicial) aqui
 import Login from '../screens/Login';
 import Cadastro from '../screens/Cadastro';
@@ -125,6 +126,11 @@ function MainTabs() {
   return (
     <Tab.Navigator
       screenOptions={({ route }) => ({
+        tabBarStyle: {
+          backgroundColor: '#3178e4',
+          borderTopColor: '#3178e4',
+          height: 50,
+        },
         tabBarIcon: ({ color, size }) => {
           let iconName;
 
@@ -138,7 +144,7 @@ function MainTabs() {
             iconName = 'cog';
           }
 
-          return <Icon name={iconName} color={color} size={size} />;
+          return <Icon name={iconName} color={'#FFF'} size={size} />;
         },
         tabBarLabel: '',
         headerShown: false,

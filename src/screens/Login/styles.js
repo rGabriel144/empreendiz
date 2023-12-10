@@ -1,12 +1,21 @@
 import React from 'react';
 import styled from 'styled-components/native';
+import colors from '../../components/color.js';
 
 export const StyledView = styled.SafeAreaView`
 	flex: 1;
 	padding-vertical: 10%;
 	padding-horizontal: 5%;
 	align-items: center;
-	background-color: papayawhip;
+	background-color: black;
+`;
+
+export const LoginContainer = styled.View`
+	flex: 1;
+    backgroundColor: ${colors.fundo};
+    alignItems: center;
+    justifyContent: center;
+    width: 100%;
 `;
 
 export const CustomButton = styled.TouchableOpacity`
@@ -55,6 +64,7 @@ export const Input = styled.TextInput`
 width: 80%;
 height: 40px;
 border: 1px solid #ccc;
+border-radius: 10px;
 padding: 8px;
 margin-bottom: 20px;
 `;

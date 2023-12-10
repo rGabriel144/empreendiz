@@ -1,10 +1,11 @@
 import styled from 'styled-components/native';
+import colors from '../../components/color.js'
 
 export const CustomButton = styled.TouchableOpacity`
 	width: 50%;
 	margin-top: 30px;
 	max-width: 300px;
-    background-color: #FF8899;
+    background-color: ${colors.botao};
 	text-align: center;
     justify-content: center;
     align-items: center;
@@ -14,7 +15,7 @@ export const CustomButton = styled.TouchableOpacity`
 export const CustomButton2 = styled.TouchableOpacity`
 	width: 50%;
 	max-width: 300px;
-    background-color: #808080;
+    background-color: ${colors.botao};
 	text-align: center;
     justify-content: center;
     align-items: center;
@@ -25,7 +26,7 @@ export const CustomButton2 = styled.TouchableOpacity`
 export const SairButton = styled.TouchableOpacity`
 	width: 80%;
 	max-width: 400px;
-    background-color: #000;
+    background-color: ${colors.botao};
 	text-align: center;
     justify-content: center;
     align-items: center;
@@ -56,10 +57,10 @@ export const Ptext = styled.Text`
 `;
 
 export const Ctext = styled.Text`
-	color: #000;
+	color: ${colors.fonte};
 	font-size: 20px;
 	margin-top: 20px;
-	border: 1px solid #000;
+	border: 1px solid ${colors.fonte};
 	border-radius: 10px;
 	padding: 10px;
 	width: 80%;
@@ -73,7 +74,7 @@ export const ButtonView = styled.View`
 
 export const Htext = styled.Text`
 	font-size: 40px;
-	color: #000;
+	color: ${colors.fonte};
 	margin-bottom: 10px;
 	font-weight: bold;
 `;
@@ -83,5 +84,5 @@ export const StyledView = styled.View`
 	padding-vertical: 10%;
 	padding-horizontal: 5%;
 	align-items: center;
-	background-color: #3178E4;
+	background-color: ${colors.fundo};
 `;

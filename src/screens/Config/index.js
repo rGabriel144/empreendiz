@@ -15,6 +15,9 @@ import {
     ScrollView,
     AdminArea
 } from './styles';
+import colors from '../../components/color.js';
+
+const colorfont = colors.fonte;
 
 
 export default function App() {
@@ -41,7 +44,7 @@ export default function App() {
 
     return (
         <StyledView>
-            <Icon name="cog" size={50} color="#000" />
+            <Icon name="cog" size={50} color={colorfont} />
             <Htext>Configurações</Htext>
             <CustomButton1 onPress={() => navigation.navigate('EditarNome')}>
                 <ButtonText>Editar nome</ButtonText>

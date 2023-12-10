@@ -21,15 +21,22 @@ import {
     ButtonView,
     H1text
 } from './styles';
+import colors from '../../../components/color.js';
+
+const colorfont = colors.fonte;
+const colorbutton = colors.botao;
 
 import { PerguntaV } from '../../../components/Quiz';
 
 export default function App() {
     const navigation = useNavigation();
+    const [alternativaSelecionada, setAlternativaSelecionada] = useState(null);
     const [respostax, setRespostax] = useState({
         index: null,
         isCorrect: null,
     });
+
+    const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
 
     const voltar = () => {
         navigation.navigate('Quiz');
@@ -45,18 +52,18 @@ export default function App() {
                 isCorrect,
             });
         }
+        setAlternativaSelecionada(respostax[index]);
     };
 
     const proximapergunta = () => {
         if (respostax.isCorrect) {
-            navigation.navigate('Quiz12');
+            navigation.navigate('Quiz1A2');
         } else {
-            // Answer is incorrect, show alert with correct answer
             Alert.alert(
                 'Resposta Incorreta',
                 `A resposta correta é: ${respostas[respostaCorreta]}`,
                 [
-                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz12') }
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1A2') }
                 ]
             );
         }
@@ -66,9 +73,9 @@ export default function App() {
     return (
         <StyledView>
             <ButtonView>
-                <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
+                <Icon name="arrow-left" size={30} color={colorfont} onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                    <Icon name="gamepad" size={50} color="#000" />
+                    <Icon name="gamepad" size={50} color={colorfont} />
                 </View>
             </ButtonView>
             <Htext>Quiz</Htext>
@@ -76,9 +83,10 @@ export default function App() {
             <H1text>Avançado</H1text>
             <PerguntaV
                 pergunta="Qual é o objetivo principal da gestão de projetos?"
-                respostas={['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos']}
+                respostas={[respostas[0], respostas[1], respostas[2]]}
                 handleRespostaClick={handleRespostaClick}
                 respostax={respostax}
+                alternativaSelecionada={alternativaSelecionada}
             />
             <View style={{ flexDirection: 'row', justifyContent: 'center', width: '60%', alignItems: 'center' }}>
                 <CustomButton
@@ -86,7 +94,7 @@ export default function App() {
                     disabled={respostax.index === null} 
                     style={{
                         marginLeft: 10,
-                        backgroundColor: respostax.index !== null ? '#000' : '#ccc', 
+                        backgroundColor: respostax.index !== null ? colorbutton : '#ccc', 
                     }}
                 >
                     <ButtonText style={{ color: respostax.index !== null ? '#fff' : '#666' }}>

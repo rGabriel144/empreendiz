@@ -8,6 +8,7 @@ import Icon from 'react-native-vector-icons/FontAwesome';
 import {
     CustomButton,
     ButtonText,
+    LoginContainer,
     Drawerbutton,
     Container,
     Input,
@@ -53,7 +54,7 @@ export default function App() {
 
     return (
         <Container>
-            <View style={styles.loginContainer}>
+            <LoginContainer>
                 <Image
                     source={require('../../img/logo.png')} 
                     style={{ width: 210, height: 200, marginTop: '0%', marginBottom: '20%'}} 
@@ -89,7 +90,7 @@ export default function App() {
                         <Icon name="google" size={30} color="white" style={styles.socialIcon} />
                     </ButtonIcon>
                 </IconLogin>
-            </View>
+            </LoginContainer>
         </Container>
     );
 }
@@ -101,13 +102,6 @@ const styles = StyleSheet.create({
         flex: 1,
         alignItems: 'center',
         justifyContent: 'center',
-    },
-    loginContainer: {
-        flex: 1,
-        backgroundColor: '#3178E4',
-        alignItems: 'center',
-        justifyContent: 'center',
-        width: '100%',
     },
     socialIcon: {
         padding: 10,

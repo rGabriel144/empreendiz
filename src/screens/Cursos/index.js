@@ -14,6 +14,9 @@ import {
     CustomButton1,
     ScrollView
 } from './styles';
+import colors from '../../components/color.js'
+
+const colorfont = colors.fonte;
 
 
 export default function App() {
@@ -27,7 +30,7 @@ export default function App() {
     return (
         <ScrollView>
             <StyledView>
-                <Icon name="book" size={50} color="#000" />
+                <Icon name="book" size={50} color={colorfont} />
                 <Htext>Cursos</Htext>
                 <CustomButton1 onPress={() => navigation.navigate('Curso1')}>
                     <ButtonText>Gestão de Projetos</ButtonText>

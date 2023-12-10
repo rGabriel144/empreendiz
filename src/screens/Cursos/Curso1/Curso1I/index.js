@@ -10,8 +10,11 @@ import {
     ButtonText,
     TextoAula,
     ScrollView,
-    HtextT
+    HtextT,
 } from './styles';
+import colors from '../../../../components/color.js';
+
+const colorfont = colors.fonte;
 
 export default function App() {
     const navigation = useNavigation();
@@ -30,18 +33,18 @@ export default function App() {
         <ScrollView>
             <StyledView>
                 <ButtonView>
-                    <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{position: 'absolute', left: 10, top: 10}} />
+                    <Icon name="arrow-left" size={30} color={colorfont} onPress={voltar} style={{position: 'absolute', left: 10, top: 10}} />
                     <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                        <Icon name="book" size={50} color="#000" />
+                        <Icon name="book" size={50} color={colorfont} />
                     </View>
                 </ButtonView>
                 <Htext>Gestão de Projetos</Htext>
-                <HtextT>Intermediario</HtextT>
-                <Text style={{color: '#FFF', fontSize: 30, marginBottom: 10, color: '#000'}}>Aula 1</Text>
+                <HtextT>Intermediário</HtextT>
+                <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
-                <Text style={{color: '#FFF', fontSize: 30, marginTop: 10, marginBottom: 10, color: '#000'}}>Aula 2</Text>
+                <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
                 <TextoAula>
                     Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
                 </TextoAula>

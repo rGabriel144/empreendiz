@@ -17,6 +17,9 @@ import {
     ButtonView,
     StyledInput
 } from './styles';
+import colors from '../../../components/color.js';
+
+const colorfont = colors.fonte;
 
 
 export default function App() {
@@ -42,9 +45,9 @@ export default function App() {
     return (
         <StyledView>
             <ButtonView>
-                <Icon name="arrow-left" size={30} color="#000" onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
+                <Icon name="arrow-left" size={30} color={colorfont} onPress={voltar} style={{ position: 'absolute', left: 10, top: 10 }} />
                 <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-                    <Icon name="pencil" size={50} color="#000" />
+                    <Icon name="pencil" size={50} color={colorfont} />
                 </View>
             </ButtonView>
             <Htext>Editar Nome</Htext>
