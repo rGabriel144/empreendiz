@@ -93,3 +93,17 @@ export const FPasswordButton = styled.TouchableOpacity`
 	padding: 10px;
 	margin-top: 10px;
 `;
+
+export const IconLogin = styled.View`
+flex-direction: row;
+margin-top: 20px;
+align-items: center;
+justify-content: center;
+margin-left: 10%;
+`;
+
+export const ButtonIcon = styled.TouchableOpacity`
+width: 20%;
+max-width: 300px;
+padding: 0px;
+`;

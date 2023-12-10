@@ -4,6 +4,7 @@ import { StyleSheet, Text, View, Image, Button } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styled from 'styled-components/native';
+import Icon from 'react-native-vector-icons/FontAwesome';
 import {
     CustomButton,
     ButtonText,
@@ -13,8 +14,11 @@ import {
     LoginButton,
     TextIcon,
     FPasswordButton,
-    ButtonText2
+    ButtonText2,
+    IconLogin,
+    ButtonIcon
 } from './styles';
+import { TouchableOpacity } from 'react-native-gesture-handler';
 
 
 export default function App() {
@@ -36,13 +40,17 @@ export default function App() {
       };
     
     const cadastro = () => {  
-        navigation.navigate('Cadastro');
+        alert('Cadastro');
     };
 
     const esquecisenha = () => {
         alert('Esqueci minha senha');
     }
     
+    const loginS = (type) => {
+        alert('Login com ' + type);
+    }
+
     return (
         <Container>
             <View style={styles.loginContainer}>
@@ -70,6 +78,17 @@ export default function App() {
                 <FPasswordButton onPress={cadastro}>
                     <ButtonText2>Cadastrar</ButtonText2>
                 </FPasswordButton>
+                <IconLogin>
+                    <ButtonIcon onPress={() => loginS('Facebook')}>
+                        <Icon name="facebook" size={30} color="white" style={styles.socialIcon} />
+                    </ButtonIcon>
+                    <ButtonIcon onPress={() => loginS('Instagram')}>
+                        <Icon name="instagram" size={30} color="white" style={styles.socialIcon} />
+                    </ButtonIcon>
+                    <ButtonIcon onPress={() => loginS('Google')}>
+                        <Icon name="google" size={30} color="white" style={styles.socialIcon} />
+                    </ButtonIcon>
+                </IconLogin>
             </View>
         </Container>
     );
@@ -89,5 +108,8 @@ const styles = StyleSheet.create({
         alignItems: 'center',
         justifyContent: 'center',
         width: '100%',
+    },
+    socialIcon: {
+        padding: 10,
     },
 });
