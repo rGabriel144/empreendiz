@@ -46,7 +46,6 @@ export default function App() {
                 if (text !== null) {
                     setpt(parseInt(text, 10));
                 }
-                console.log(pt);
             } catch (error) {
                 console.error('Erro ao recuperar o texto:', error);
             }
