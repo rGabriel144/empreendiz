@@ -32,13 +32,6 @@ export default function App() {
         Alert.alert(
             'Aviso',
             'Esta tela será semelhante à tela de editar nome.',
-            [
-                {
-                    text: 'OK',
-                    onPress: () => console.log('OK Pressed')
-                }
-            ],
-            { cancelable: false }
         );
     };
 
