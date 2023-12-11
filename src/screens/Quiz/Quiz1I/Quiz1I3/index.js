@@ -36,13 +36,13 @@ export default function App() {
         isCorrect: null,
     });
 
-    const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
+    const respostas = ['Lista de participantes e suas funções', 'Descrição detalhada de cada atividade', 'Sequência de atividades ao longo do tempo', 'Orçamento global do projeto'];
 
     const voltar = () => {
         navigation.navigate('Quiz');
     };
 
-    const respostaCorreta = 1;
+    const respostaCorreta = 2;
 
     const handleRespostaClick = (index) => {
         if (respostax.index === null) {
@@ -52,18 +52,31 @@ export default function App() {
                 isCorrect,
             });
         }
-        setAlternativaSelecionada(respostax[index]);
+        setAlternativaSelecionada(respostas[index]);
     };
 
-    const proximapergunta = () => {
+
+    const adicionarPonto = async () => {
+        try {
+            const pontosString = await AsyncStorage.getItem('pontos');
+            const pontosAtualizados = pontosString ? parseInt(pontosString, 10) + 1 : 1;
+            await AsyncStorage.setItem('pontos', pontosAtualizados.toString());
+            console.log(pontosAtualizados);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const proximapergunta = async () => {
         if (respostax.isCorrect) {
-            navigation.navigate('Quiz1A2');
+            await adicionarPonto();
+            navigation.navigate('Final1B');
         } else {
             Alert.alert(
                 'Resposta Incorreta',
                 `A resposta correta é: ${respostas[respostaCorreta]}`,
                 [
-                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1A2') }
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Final1B') }
                 ]
             );
         }
@@ -80,10 +93,10 @@ export default function App() {
             </ButtonView>
             <Htext>Quiz</Htext>
             <H1text>Gestão de Projetos</H1text>
-            <H1text>Intermediário</H1text>
+            <H1text>Básico</H1text>
             <PerguntaV
-                pergunta="Qual é o objetivo principal da gestão de projetos?"
-                respostas={[respostas[0], respostas[1], respostas[2]]}
+                pergunta="O que um cronograma de projeto geralmente inclui?"
+                respostas={[respostas[0], respostas[1], respostas[2], respostas[3]]}
                 handleRespostaClick={handleRespostaClick}
                 respostax={respostax}
                 alternativaSelecionada={alternativaSelecionada}

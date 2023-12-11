@@ -16,7 +16,6 @@ import {
     ButtonView
 } from './styles';
 import colors from '../../../../components/color.js';
-import { HtextT } from '../Curso1B/styles.js';
 
 const colorfont = colors.fonte;
 

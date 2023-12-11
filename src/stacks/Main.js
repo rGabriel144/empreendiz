@@ -56,10 +56,12 @@ import Curso2 from '../screens/Cursos/Curso2';
 import Curso2B from '../screens/Cursos/Curso2/Curso2B';
 import Curso2I from '../screens/Cursos/Curso2/Curso2I';
 import Curso2A from '../screens/Cursos/Curso2/Curso2A';
+import Material2 from '../screens/Cursos/Curso2/Material2';
 import Curso3 from '../screens/Cursos/Curso3';
 import Curso3B from '../screens/Cursos/Curso3/Curso3B';
 import Curso3I from '../screens/Cursos/Curso3/Curso3I';
 import Curso3A from '../screens/Cursos/Curso3/Curso3A';
+import Material3 from '../screens/Cursos/Curso3/Material3';
 import Curso4 from '../screens/Cursos/Curso4';
 import Curso5 from '../screens/Cursos/Curso5';
 import Curso6 from '../screens/Cursos/Curso6';
@@ -94,10 +96,12 @@ function CursosStack() {
       <Stack.Screen name="Curso2B" component={Curso2B} options={{headerShown: false}}/>
       <Stack.Screen name="Curso2I" component={Curso2I} options={{headerShown: false}}/>
       <Stack.Screen name="Curso2A" component={Curso2A} options={{headerShown: false}}/>
+      <Stack.Screen name="Material2" component={Material2} options={{headerShown: false}}/>
       <Stack.Screen name="Curso3" component={Curso3} options={{headerShown: false}}/>
       <Stack.Screen name="Curso3B" component={Curso3B} options={{headerShown: false}}/>
       <Stack.Screen name="Curso3I" component={Curso3I} options={{headerShown: false}}/>
       <Stack.Screen name="Curso3A" component={Curso3A} options={{headerShown: false}}/>
+      <Stack.Screen name="Material3" component={Material3} options={{headerShown: false}}/>
       <Stack.Screen name="Curso4" component={Curso4} options={{headerShown: false}}/>
       <Stack.Screen name="Curso5" component={Curso5} options={{headerShown: false}}/>
       <Stack.Screen name="Curso6" component={Curso6} options={{headerShown: false}}/>

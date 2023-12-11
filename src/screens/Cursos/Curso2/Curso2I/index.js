@@ -38,17 +38,17 @@ export default function App() {
                         <Icon name="book" size={50} color={colorfont} />
                     </View>
                 </ButtonView>
-                <Htext>Gestão de Projetos</Htext>
+                <Htext>Finanças Empresariais</Htext>
                 <HtextT>Intermediário</HtextT>
+                <TextoAula>
+                    EBITDA, um indicador que representa o lucro antes de juros, impostos, depreciação e amortização. Sua utilidade reside na capacidade de proporcionar uma visão mais abrangente da performance financeira, isolando variáveis que não estão diretamente relacionadas às operações principais da empresa.
+                </TextoAula>
                 <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
+                    <Icon name="play" size={30} color={'#fff'} />
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
-                <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
-                <TextoAula>
-                    Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
-                </TextoAula>
-                <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
+                <CustomButton1 onPress={() => navigation.navigate('Material2')}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz2I' })}>

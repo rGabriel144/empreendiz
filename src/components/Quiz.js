@@ -3,7 +3,7 @@ import { View } from 'react-native';
 import styled from 'styled-components/native';
 
 export const PView = styled.View`
-	margin-top: 50px;
+	margin-top: 0px;
 	flex: 1;
 	justify-content: space-evenly;
 	align-items: center;

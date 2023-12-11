@@ -43,13 +43,6 @@ export default function App() {
         }
     }
 
-    const Quiz = () => {
-        navigation.navigate('Quiz1B3');
-    }
-
-    const QuizF = () => {
-        navigation.navigate('Final1B');
-    }
 
     return (
         <StyledView>
@@ -66,12 +59,6 @@ export default function App() {
             </CustomButton1>
             <CustomButton1 onPress={limparP}>
                 <ButtonText>Limpar Pontos</ButtonText>
-            </CustomButton1>
-            <CustomButton1 onPress={Quiz}>
-                <ButtonText>Quiz</ButtonText>
-            </CustomButton1>
-            <CustomButton1 onPress={QuizF}>
-                <ButtonText>QuizF</ButtonText>
             </CustomButton1>
         </StyledView>
     );

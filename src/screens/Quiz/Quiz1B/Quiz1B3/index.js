@@ -61,7 +61,6 @@ export default function App() {
             const pontosString = await AsyncStorage.getItem('pontos');
             const pontosAtualizados = pontosString ? parseInt(pontosString, 10) + 1 : 1;
             await AsyncStorage.setItem('pontos', pontosAtualizados.toString());
-            console.log(pontosAtualizados);
         } catch (error) {
             console.error(error);
         }

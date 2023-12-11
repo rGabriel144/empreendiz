@@ -40,15 +40,15 @@ export default function App() {
                 </ButtonView>
                 <Htext>Recursos Humanos</Htext>
                 <HtextT>Básico</HtextT>
+                <TextoAula>
+                    Na disciplina de Recursos Humanos, concentramo-nos nos princípios essenciais que orientam a gestão de pessoas dentro de uma organização. Em resposta à primeira pergunta, é vital compreender que o principal objetivo da gestão de Recursos Humanos é gerenciar eficazmente as pessoas (opção c), promovendo um ambiente de trabalho saudável e produtivo.
+                </TextoAula>
                 <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
+                    <Icon name="play" size={30} color={'#fff'} />
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
-                <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
-                <TextoAula>
-                    Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
-                </TextoAula>
-                <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
+                <CustomButton1 onPress={() => navigation.navigate('Material3')}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz3B' })}>

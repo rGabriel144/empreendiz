@@ -40,15 +40,15 @@ export default function App() {
                 </ButtonView>
                 <Htext>Recursos Humanos</Htext>
                 <HtextT>Intermediário</HtextT>
+                <TextoAula>
+                    O papel fundamental da gestão de Recursos Humanos, destaca-se durante a fase de execução ao monitorar o progresso e desenvolver a equipe, proporcionando um ambiente propício para o alcance dos objetivos do projeto. Isso contrasta com opções que sugerem atribuir tarefas, elaborar cronograma ou estabelecer escopo, que não refletem o cerne da atuação nessa fase.
+                </TextoAula>
                 <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
+                    <Icon name="play" size={30} color={'#fff'} />
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
-                <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
-                <TextoAula>
-                    Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
-                </TextoAula>
-                <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
+                <CustomButton1 onPress={() => navigation.navigate('Material3')}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz3I' })}>

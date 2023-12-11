@@ -40,15 +40,15 @@ export default function App() {
                 </ButtonView>
                 <Htext>Finanças Empresariais</Htext>
                 <HtextT>Avançado</HtextT>
+                <TextoAula>
+                    Valor Presente Líquido (VPL) e seu papel nas decisões financeiras a longo prazo. O VPL representa o valor atual de receitas futuras descontadas, desempenhando um papel crucial na determinação da rentabilidade de um investimento ao descontar fluxos de caixa futuros.
+                </TextoAula>
                 <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
+                    <Icon name="play" size={30} color={'#fff'} />
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
-                <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
-                <TextoAula>
-                    Na gestão de projetos, aprendemos a planejar, executar e monitorar atividades para atingir objetivos específicos. Metodologias ágeis, como Scrum, enfatizam a flexibilidade. Ferramentas como o Gantt e PERT ajudam a visualizar o progresso. Vamos explorar como garantir o sucesso de um projeto.    
-                </TextoAula>
-                <CustomButton1 onPress={() => navigation.navigate('MaterialTab', { screen: 'Material1' })}>
+                <CustomButton1 onPress={() => navigation.navigate('Material2')}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
                 <CustomButton1 onPress={() => navigation.navigate('QuizTab', { screen: 'Quiz2A' })}>

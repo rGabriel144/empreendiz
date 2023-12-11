@@ -36,7 +36,10 @@ export default function App() {
         isCorrect: null,
     });
 
-    const respostas = ['Maximizar os lucros', 'Alcançar os objetivos do projeto', 'Minimizar os riscos'];
+    const respostas = ['Treinamento de liderança', 
+        'Contratação de novos', 
+        'Avaliação de desempenho',
+        'Políticas de remuneração'];
 
     const voltar = () => {
         navigation.navigate('Quiz');
@@ -52,18 +55,31 @@ export default function App() {
                 isCorrect,
             });
         }
-        setAlternativaSelecionada(respostax[index]);
+        setAlternativaSelecionada(respostas[index]);
     };
 
-    const proximapergunta = () => {
+
+    const adicionarPonto = async () => {
+        try {
+            const pontosString = await AsyncStorage.getItem('pontos');
+            const pontosAtualizados = pontosString ? parseInt(pontosString, 10) + 1 : 1;
+            await AsyncStorage.setItem('pontos', pontosAtualizados.toString());
+            console.log(pontosAtualizados);
+        } catch (error) {
+            console.error(error);
+        }
+    };
+
+    const proximapergunta = async () => {
         if (respostax.isCorrect) {
-            navigation.navigate('Quiz1A2');
+            await adicionarPonto();
+            navigation.navigate('Quiz3B3');
         } else {
             Alert.alert(
                 'Resposta Incorreta',
                 `A resposta correta é: ${respostas[respostaCorreta]}`,
                 [
-                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1A2') }
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz3B3') }
                 ]
             );
         }
@@ -79,11 +95,11 @@ export default function App() {
                 </View>
             </ButtonView>
             <Htext>Quiz</Htext>
-            <H1text>Finanças Empresariais</H1text>
+            <H1text>Recursos Humanos</H1text>
             <H1text>Básico</H1text>
             <PerguntaV
-                pergunta="Qual é o objetivo principal da gestão de projetos?"
-                respostas={[respostas[0], respostas[1], respostas[2]]}
+                pergunta="O que significa Onboarding?"
+                respostas={[respostas[0], respostas[1], respostas[2], respostas[3]]}
                 handleRespostaClick={handleRespostaClick}
                 respostax={respostax}
                 alternativaSelecionada={alternativaSelecionada}

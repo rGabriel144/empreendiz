@@ -40,15 +40,14 @@ export default function App() {
                 </ButtonView>
                 <Htext>Gestão de Projetos</Htext>
                 <HtextT>Básico</HtextT>
+                <TextoAula>
+                    Na disciplina de Gestão de Projetos, abordamos conceitos essenciais para o sucesso na condução de iniciativas. O plano de projeto, foco da primeira pergunta, tem como propósito principal a descrição das atividades e tarefas fundamentais para alcançar os objetivos do projeto, diferindo da opção que sugere registrar atividades diárias.
+                </TextoAula>
                 <Text style={{color: colorfont, fontSize: 30, marginBottom: 10}}>Aula 1</Text>
                 <CustomButton1 onPress={assistirVideo}>
                     <Icon name="play" size={30} color={'#fff'} />
                     <ButtonText>Assistir</ButtonText>
                 </CustomButton1>
-                <Text style={{color: colorfont, fontSize: 30, marginTop: 10, marginBottom: 10}}>Aula 2</Text>
-                <TextoAula>
-                Gestão de Projetos é o processo de planejar, executar e controlar atividades para atingir metas dentro de prazos e orçamentos definidos. Envolve fases de definição de objetivos, implementação do plano e monitoramento do progresso. Metodologias como a tradicional (Cascata) e ágil oferecem abordagens distintas, enquanto ferramentas como EDT, Caminho Crítico e EVM são essenciais. Competências necessárias incluem liderança, comunicação eficaz e gestão de riscos. A gestão de projetos, presente em diversos setores, é adaptável às necessidades específicas de cada projeto.
-                </TextoAula>
                 <CustomButton1 onPress={() => navigation.navigate('Material1')}>
                     <ButtonText>Material</ButtonText>
                 </CustomButton1>
