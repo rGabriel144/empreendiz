@@ -23,27 +23,35 @@ import Final1B from '../screens/Quiz/Quiz1B/Final1B';
 import Quiz1I from '../screens/Quiz/Quiz1I';
 import Quiz1I2 from '../screens/Quiz/Quiz1I/Quiz1I2';
 import Quiz1I3 from '../screens/Quiz/Quiz1I/Quiz1I3';
+import Final1I from '../screens/Quiz/Quiz1I/Final1I';
 import Quiz1A from '../screens/Quiz/Quiz1A';
 import Quiz1A2 from '../screens/Quiz/Quiz1A/Quiz1A2';
 import Quiz1A3 from '../screens/Quiz/Quiz1A/Quiz1A3';
+import Final1A from '../screens/Quiz/Quiz1A/Final1A';
 import Quiz2B from '../screens/Quiz/Quiz2B';
 import Quiz2B2 from '../screens/Quiz/Quiz2B/Quiz2B2';
 import Quiz2B3 from '../screens/Quiz/Quiz2B/Quiz2B3';
+import Final2B from '../screens/Quiz/Quiz2B/Final2B';
 import Quiz2I from '../screens/Quiz/Quiz2I';
 import Quiz2I2 from '../screens/Quiz/Quiz2I/Quiz2I2';
 import Quiz2I3 from '../screens/Quiz/Quiz2I/Quiz2I3';
+import Final2I from '../screens/Quiz/Quiz2I/Final2I';
 import Quiz2A from '../screens/Quiz/Quiz2A';
 import Quiz2A2 from '../screens/Quiz/Quiz2A/Quiz2A2';
 import Quiz2A3 from '../screens/Quiz/Quiz2A/Quiz2A3';
+import Final2A from '../screens/Quiz/Quiz2A/Final2A';
 import Quiz3B from '../screens/Quiz/Quiz3B';
 import Quiz3B2 from '../screens/Quiz/Quiz3B/Quiz3B2';
 import Quiz3B3 from '../screens/Quiz/Quiz3B/Quiz3B3';
+import Final3B from '../screens/Quiz/Quiz3B/Final3B';
 import Quiz3I from '../screens/Quiz/Quiz3I';
 import Quiz3I2 from '../screens/Quiz/Quiz3I/Quiz3I2';
 import Quiz3I3 from '../screens/Quiz/Quiz3I/Quiz3I3';
+import Final3I from '../screens/Quiz/Quiz3I/Final3I';
 import Quiz3A from '../screens/Quiz/Quiz3A';
 import Quiz3A2 from '../screens/Quiz/Quiz3A/Quiz3A2';
 import Quiz3A3 from '../screens/Quiz/Quiz3A/Quiz3A3';
+import Final3A from '../screens/Quiz/Quiz3A/Final3A';
 
 
 
@@ -124,27 +132,35 @@ function QuizStack() {
       <Stack.Screen name="Quiz1I" component={Quiz1I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1I2" component={Quiz1I2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1I3" component={Quiz1I3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final1I" component={Final1I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1A" component={Quiz1A} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1A2" component={Quiz1A2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz1A3" component={Quiz1A3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final1A" component={Final1A} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2B" component={Quiz2B} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2B2" component={Quiz2B2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2B3" component={Quiz2B3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final2B" component={Final2B} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2I" component={Quiz2I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2I2" component={Quiz2I2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2I3" component={Quiz2I3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final2I" component={Final2I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2A" component={Quiz2A} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2A2" component={Quiz2A2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz2A3" component={Quiz2A3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final2A" component={Final2A} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3B" component={Quiz3B} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3B2" component={Quiz3B2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3B3" component={Quiz3B3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final3B" component={Final3B} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3I" component={Quiz3I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3I2" component={Quiz3I2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3I3" component={Quiz3I3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final3I" component={Final3I} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3A" component={Quiz3A} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3A2" component={Quiz3A2} options={{ headerShown: false }} />
       <Stack.Screen name="Quiz3A3" component={Quiz3A3} options={{ headerShown: false }} />
+      <Stack.Screen name="Final3A" component={Final3A} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

@@ -93,13 +93,13 @@ export default function App() {
     const proximapergunta = async () => {
         if (respostax.isCorrect) {
             await adicionarPonto();
-            navigation.navigate('Quiz1B2');
+            navigation.navigate('Quiz1A2');
         } else {
             Alert.alert(
                 'Resposta Incorreta',
                 `A resposta correta é: ${respostas[respostaCorreta]}`,
                 [
-                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1B2') }
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1A2') }
                 ]
             );
         }
@@ -116,7 +116,7 @@ export default function App() {
             </ButtonView>
             <Htext>Quiz</Htext>
             <H1text>Gestão de Projetos</H1text>
-            <H1text>Básico</H1text>
+            <H1text>Avançado</H1text>
             <PerguntaV
                 pergunta="Qual é o propósito principal de um plano de projeto na gestão de projetos?"
                 respostas={[respostas[0], respostas[1], respostas[2], respostas[3]]}

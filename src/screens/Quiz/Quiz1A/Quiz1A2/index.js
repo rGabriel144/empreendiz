@@ -73,13 +73,13 @@ export default function App() {
     const proximapergunta = async () => {
         if (respostax.isCorrect) {
             await adicionarPonto();
-            navigation.navigate('Quiz1B3');
+            navigation.navigate('Quiz1A3');
         } else {
             Alert.alert(
                 'Resposta Incorreta',
                 `A resposta correta é: ${respostas[respostaCorreta]}`,
                 [
-                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1B3') }
+                    { text: 'Próxima Pergunta', onPress: () => navigation.navigate('Quiz1A3') }
                 ]
             );
         }
@@ -96,7 +96,7 @@ export default function App() {
             </ButtonView>
             <Htext>Quiz</Htext>
             <H1text>Gestão de Projetos</H1text>
-            <H1text>Básico</H1text>
+            <H1text>Avançado</H1text>
             <PerguntaV
                 pergunta="Por que é importante definir o escopo de um projeto no início do planejamento?"
                 respostas={[respostas[0], respostas[1], respostas[2], respostas[3]]}

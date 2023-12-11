@@ -34,7 +34,9 @@ export default function App() {
 
     const voltar = () => {
         AsyncStorage.removeItem('pontos');
-        navigation.navigate('Quiz');
+        navigation.reset({
+            routes: [{ name: 'Quiz' }]
+        });
     };
 
 
@@ -68,7 +70,7 @@ export default function App() {
             </ButtonView>
             <Htext>Quiz</Htext>
             <H1text>Gestão de Projetos</H1text>
-            <H1text>Básico</H1text>
+            <H1text>Avançado</H1text>
             <PerguntaV>
                 <H1text>Quiz Concluido</H1text>
                 <H1text>Você acertou {savedText} de 3</H1text>

@@ -67,7 +67,7 @@ export default function App() {
                 </View>
             </ButtonView>
             <Htext>Quiz</Htext>
-            <H1text>Gestão de Projetos</H1text>
+            <H1text>Finanças Empresariais</H1text>
             <H1text>Básico</H1text>
             <PerguntaV>
                 <H1text>Quiz Concluido</H1text>

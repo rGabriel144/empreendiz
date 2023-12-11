@@ -34,7 +34,9 @@ export default function App() {
 
     const voltar = () => {
         AsyncStorage.removeItem('pontos');
-        navigation.navigate('Quiz');
+        navigation.reset({
+            routes: [{ name: 'Quiz' }]
+        });
     };
 
 

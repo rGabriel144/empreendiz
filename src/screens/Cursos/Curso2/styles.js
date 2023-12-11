@@ -40,6 +40,7 @@ font-size: 40px;
 color: ${colors.fonte};
 margin-bottom: 10px;
 font-weight: bold;
+text-align: center;
 `;
 
 export const CustomButton1 = styled.TouchableOpacity`

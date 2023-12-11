@@ -36,13 +36,13 @@ export default function App() {
                     </View>
                 </ButtonView>
                 <Htext>Finanças Empresariais</Htext>
-                <CustomButton1 onPress={() => navigation.navigate('Curso1B')}>
+                <CustomButton1 onPress={() => navigation.navigate('Curso2B')}>
                     <ButtonText>Básico</ButtonText>
                 </CustomButton1>
-                <CustomButton1 onPress={() => navigation.navigate('Curso1I')}>
+                <CustomButton1 onPress={() => navigation.navigate('Curso2I')}>
                     <ButtonText>Intermediário</ButtonText>
                 </CustomButton1>
-                <CustomButton1 onPress={() => navigation.navigate('Curso1A')}>
+                <CustomButton1 onPress={() => navigation.navigate('Curso2A')}>
                     <ButtonText>Avançado</ButtonText>
                 </CustomButton1>
             </StyledView>
