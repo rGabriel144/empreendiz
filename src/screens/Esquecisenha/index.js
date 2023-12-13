@@ -29,16 +29,10 @@ const colorfont = colors.fonte;
 export default function App() {
     const navigation = useNavigation();
 
-    const cadastro = () => {
+    const esqueci = () => {
         Alert.alert(
-            'Sucesso',
-            'Conta criada com sucesso!',
-            [
-                {
-                    text: 'OK',
-                    onPress: () => navigation.navigate('Login'),
-                },
-            ]
+            'Esqueci minha senha',
+            `Email enviado com sucesso!`,
         );
     }
 
@@ -54,26 +48,12 @@ export default function App() {
                     source={require('../../img/logo.png')} 
                     style={{ width: 210, height: 200, marginTop: '0%', marginBottom: '10%'}} 
                 />
-                <Htext>Cadastro</Htext>
-                <Input
-                    placeholder="Nome"
-                />
-                <Input
-                    placeholder="Senha"
-                    secureTextEntry
-                />
-                <Input
-                    placeholder="Confirmar senha"
-                    secureTextEntry
-                />
+                <Htext>Digite seu email abaixo para recuperar sua senha</Htext>
                 <Input
                     placeholder="Email"
                 />
-                <Input
-                    placeholder="Telefone"
-                />
-                <LoginButton onPress={cadastro}>
-                    <ButtonText>Criar conta</ButtonText>
+                <LoginButton onPress={esqueci}>
+                    <ButtonText>Enviar</ButtonText>
                 </LoginButton>
             </LoginContainer>
         </Container>

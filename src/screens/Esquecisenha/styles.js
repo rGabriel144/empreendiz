@@ -19,10 +19,13 @@ export const LoginContainer = styled.View`
 `;
 
 export const Htext = styled.Text`
-font-size: 25px;
+font-size: 30px;
 color: #FFF;
 margin-bottom: 10px;
 font-weight: bold;
+text-align: center;
+margin-left: 30px;
+margin-right: 30px;
 `;
 
 export const CustomButton = styled.TouchableOpacity`

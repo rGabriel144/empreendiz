@@ -1,6 +1,6 @@
 import { StatusBar } from 'expo-status-bar';
 import React, { useState } from 'react';
-import { StyleSheet, Text, View, Image, Button, TextInput } from 'react-native';
+import { StyleSheet, Text, View, Image, Button, TextInput, Alert } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import styled from 'styled-components/native';
@@ -29,7 +29,7 @@ export default function App() {
     const [username, setUsername] = useState('');
     const [password, setPassword] = useState('');
 
-    const idtest = 'Thomas';
+    const idtest = 'Thomas Müller';
 
     const login = async () => {
         if (username === '' && password === '') {
@@ -41,15 +41,18 @@ export default function App() {
       };
     
     const cadastro = () => {  
-        alert('Cadastro');
+        navigation.navigate('Cadastro');
     };
 
     const esquecisenha = () => {
-        alert('Esqueci minha senha');
+        navigation.navigate('Esquecisenha');
     }
-    
+
     const loginS = (type) => {
-        alert('Login com ' + type);
+        Alert.alert(
+            'Social Login',
+            ('Login com ' + type),
+        );
     }
 
     return (

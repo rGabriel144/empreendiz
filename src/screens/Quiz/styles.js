@@ -28,6 +28,7 @@ export const ButtonText = styled.Text`
 	color: #FFF;
 	padding: 5px;
 	text-align: center;
+	flex: 1;
 `;
 
 
@@ -46,7 +47,7 @@ export const Htext = styled.Text`
 `;
 
 export const CustomButton1 = styled.TouchableOpacity`
-	width: 85%;
+	width: 90%;
 	max-width: 400px;
 	background-color: ${colors.botao};
 	text-align: center;

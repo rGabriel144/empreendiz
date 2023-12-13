@@ -59,9 +59,9 @@ export default function App() {
         <Circle cx="75" cy="75" r="67.5" fill="white" />
       </Svg>
       <Ctext>Nome: {savedText}</Ctext>
-      <Ctext>DD/MM/YYYY</Ctext>
-      <Ctext>Email@Email.com</Ctext>
-      <Ctext>Telefone: (00) 00000-0000</Ctext>
+      <Ctext>13/09/1989</Ctext>
+      <Ctext>esmullert@gmail.com</Ctext>
+      <Ctext>Telefone: (71) 0807-2014</Ctext>
       <SairButton onPress={clearandgoToInputScreen}>
         <ButtonText>Sair</ButtonText>
       </SairButton>

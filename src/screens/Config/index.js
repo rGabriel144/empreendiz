@@ -48,12 +48,6 @@ export default function App() {
             <CustomButton1 onPress={mensagem}>
                 <ButtonText>Editar telefone</ButtonText>
             </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Lorem ipsum eget orci cursus pellentesque</ButtonText>
-            </CustomButton1>
-            <CustomButton1>
-                <ButtonText>Lorem Ipsum aliquet mattis ornare</ButtonText>
-            </CustomButton1>
             <AdminArea>
                 <Text style={{ fontSize: 30, color: '#000' }}>Área do Administrador</Text>
                 <Text style={{ fontSize: 10, color: '#000' }}>Apenas exemplo, será visivel apenas para o administrador</Text>

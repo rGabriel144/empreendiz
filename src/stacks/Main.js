@@ -14,6 +14,7 @@ import Cursos from '../screens/Cursos';
 import Config from '../screens/Config';
 import Admin from '../screens/Config/Admin';
 import EditarNome from '../screens/Config/EditarNome';
+import Esquecisenha from '../screens/Esquecisenha';
 
 import Quiz from '../screens/Quiz';
 import Quiz1B from '../screens/Quiz/Quiz1B';
@@ -87,6 +88,7 @@ function LoginStack() {
     <Stack.Navigator>
       <Stack.Screen name="Login" component={Login} options={{ headerShown: false }} />
       <Stack.Screen name="Cadastro" component={Cadastro} options={{ headerShown: false }} />
+      <Stack.Screen name="Esquecisenha" component={Esquecisenha} options={{ headerShown: false }} />
     </Stack.Navigator>
   );
 }

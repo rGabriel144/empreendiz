@@ -25,7 +25,7 @@ export default function App() {
     }
 
     const assistirVideo = () => {
-        const youtubeUrl = `https://www.youtube.com/watch?v=dQw4w9WgXcQ`;
+        const youtubeUrl = `https://www.youtube.com/watch?v=ryISEgXkCac`;
         Linking.openURL(youtubeUrl);
     }
 
